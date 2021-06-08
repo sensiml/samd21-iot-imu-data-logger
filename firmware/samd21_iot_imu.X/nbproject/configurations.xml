@@ -1,42 +1,45 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><configurationDescriptor version="65">
-  <logicalFolder displayName="root" name="root" projectFiles="true">
-    <logicalFolder displayName="Header Files" name="HeaderFiles" projectFiles="true">
-      <logicalFolder displayName="bmi160" name="bmi160" projectFiles="true">
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="65">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="bmi160" displayName="bmi160" projectFiles="true">
         <itemPath>../bmi160/bmi160.h</itemPath>
         <itemPath>../bmi160/bmi160_defs.h</itemPath>
       </logicalFolder>
-      <logicalFolder displayName="config" name="f1" projectFiles="true">
-        <logicalFolder displayName="SAMD21_IOT_WG_BMI160" name="f2" projectFiles="true">
-          <logicalFolder displayName="peripheral" name="f1" projectFiles="true">
-            <logicalFolder displayName="clock" name="f5" projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f2" displayName="SAMD21_IOT_WG_BMI160" projectFiles="true">
+          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f5" displayName="clock" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="eic" name="f8" projectFiles="true">
+            <logicalFolder name="f8" displayName="eic" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/eic/plib_eic.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="evsys" name="f3" projectFiles="true">
+            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="nvic" name="f6" projectFiles="true">
+            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="nvmctrl" name="f1" projectFiles="true">
+            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="port" name="f4" projectFiles="true">
+            <logicalFolder name="f4" displayName="port" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="sercom" name="f2" projectFiles="true">
-              <logicalFolder displayName="i2c_master" name="f1" projectFiles="true">
+            <logicalFolder name="f2" displayName="sercom" projectFiles="true">
+              <logicalFolder name="f1" displayName="i2c_master" projectFiles="true">
                 <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h</itemPath>
                 <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom1_i2c_master.h</itemPath>
               </logicalFolder>
-              <logicalFolder displayName="usart" name="f2" projectFiles="true">
+              <logicalFolder name="f2" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom5_usart.h</itemPath>
                 <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder displayName="systick" name="f7" projectFiles="true">
+            <logicalFolder name="f7" displayName="systick" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/systick/plib_systick.h</itemPath>
             </logicalFolder>
           </logicalFolder>
@@ -47,37 +50,39 @@
           <itemPath>../src/config/SAMD21_IOT_WG_BMI160/interrupts.h</itemPath>
           <itemPath>../src/config/SAMD21_IOT_WG_BMI160/device_vectors.h</itemPath>
         </logicalFolder>
-        <logicalFolder displayName="SAMD21_IOT_WG_ICM42688" name="f1" projectFiles="true">
-          <logicalFolder displayName="peripheral" name="f1" projectFiles="true">
-            <logicalFolder displayName="clock" name="f5" projectFiles="true">
+        <logicalFolder name="f1"
+                       displayName="SAMD21_IOT_WG_ICM42688"
+                       projectFiles="true">
+          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f5" displayName="clock" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="eic" name="f8" projectFiles="true">
+            <logicalFolder name="f8" displayName="eic" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/eic/plib_eic.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="evsys" name="f2" projectFiles="true">
+            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="nvic" name="f6" projectFiles="true">
+            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="nvmctrl" name="f1" projectFiles="true">
+            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="port" name="f4" projectFiles="true">
+            <logicalFolder name="f4" displayName="port" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="sercom" name="f3" projectFiles="true">
-              <logicalFolder displayName="spi_master" name="f1" projectFiles="true">
+            <logicalFolder name="f3" displayName="sercom" projectFiles="true">
+              <logicalFolder name="f1" displayName="spi_master" projectFiles="true">
                 <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.h</itemPath>
                 <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h</itemPath>
               </logicalFolder>
-              <logicalFolder displayName="usart" name="f2" projectFiles="true">
+              <logicalFolder name="f2" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom5_usart.h</itemPath>
                 <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder displayName="systick" name="f7" projectFiles="true">
+            <logicalFolder name="f7" displayName="systick" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/systick/plib_systick.h</itemPath>
             </logicalFolder>
           </logicalFolder>
@@ -89,7 +94,7 @@
           <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/device_vectors.h</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder displayName="Icm426xx" name="Icm426xx" projectFiles="true">
+      <logicalFolder name="Icm426xx" displayName="Icm426xx" projectFiles="true">
         <itemPath>../Icm426xx/Icm426xxDefs.h</itemPath>
         <itemPath>../Icm426xx/Icm426xxDriver_HL.h</itemPath>
         <itemPath>../Icm426xx/Icm426xxDriver_HL_apex.h</itemPath>
@@ -100,9 +105,9 @@
         <itemPath>../Icm426xx/InvError.h</itemPath>
         <itemPath>../Icm426xx/InvExport.h</itemPath>
       </logicalFolder>
-      <logicalFolder displayName="packs" name="f2" projectFiles="true">
-        <logicalFolder displayName="ATSAMD21G18A_DFP" name="f1" projectFiles="true">
-          <logicalFolder displayName="component" name="f1" projectFiles="true">
+      <logicalFolder name="f2" displayName="packs" projectFiles="true">
+        <logicalFolder name="f1" displayName="ATSAMD21G18A_DFP" projectFiles="true">
+          <logicalFolder name="f1" displayName="component" projectFiles="true">
             <itemPath>../src/packs/ATSAMD21G18A_DFP/component/ac.h</itemPath>
             <itemPath>../src/packs/ATSAMD21G18A_DFP/component/adc.h</itemPath>
             <itemPath>../src/packs/ATSAMD21G18A_DFP/component/dac.h</itemPath>
@@ -127,7 +132,7 @@
             <itemPath>../src/packs/ATSAMD21G18A_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAMD21G18A_DFP/component/wdt.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="instance" name="f3" projectFiles="true">
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/ATSAMD21G18A_DFP/instance/ac.h</itemPath>
             <itemPath>../src/packs/ATSAMD21G18A_DFP/instance/adc.h</itemPath>
             <itemPath>../src/packs/ATSAMD21G18A_DFP/instance/dac.h</itemPath>
@@ -165,15 +170,15 @@
             <itemPath>../src/packs/ATSAMD21G18A_DFP/instance/usb.h</itemPath>
             <itemPath>../src/packs/ATSAMD21G18A_DFP/instance/wdt.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="pio" name="f2" projectFiles="true">
+          <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMD21G18A_DFP/pio/samd21g18a.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAMD21G18A_DFP/samd21g18a.h</itemPath>
         </logicalFolder>
-        <logicalFolder displayName="CMSIS" name="f2" projectFiles="true">
-          <logicalFolder displayName="CMSIS" name="f1" projectFiles="true">
-            <logicalFolder displayName="Core" name="f1" projectFiles="true">
-              <logicalFolder displayName="Include" name="f1" projectFiles="true">
+        <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
+          <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
+            <logicalFolder name="f1" displayName="Core" projectFiles="true">
+              <logicalFolder name="f1" displayName="Include" projectFiles="true">
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
@@ -194,63 +199,70 @@
       <itemPath>../src/app_config.h</itemPath>
       <itemPath>../src/sensor_config.h</itemPath>
       <itemPath>../src/buffer_config.h</itemPath>
+      <itemPath>../src/ssi_comms.h</itemPath>
     </logicalFolder>
-    <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true">
-      <logicalFolder displayName="config" name="f1" projectFiles="true">
-        <logicalFolder displayName="SAMD21_IOT_WG_BMI160" name="f1" projectFiles="true">
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1" displayName="SAMD21_IOT_WG_BMI160" projectFiles="true">
           <itemPath>../src/config/SAMD21_IOT_WG_BMI160/ATSAMD21G18A.ld</itemPath>
         </logicalFolder>
-        <logicalFolder displayName="SAMD21_IOT_WG_ICM42688" name="f2" projectFiles="true">
+        <logicalFolder name="f2"
+                       displayName="SAMD21_IOT_WG_ICM42688"
+                       projectFiles="true">
           <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/ATSAMD21G18A.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder displayName="Source Files" name="SourceFiles" projectFiles="true">
-      <logicalFolder displayName="app_config" name="app_config" projectFiles="true">
-        <logicalFolder displayName="bmi160" name="bmi160" projectFiles="true">
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="app_config" displayName="app_config" projectFiles="true">
+        <logicalFolder name="bmi160" displayName="bmi160" projectFiles="true">
           <itemPath>../src/app_config/bmi160/bmi160_sensor.c</itemPath>
         </logicalFolder>
-        <logicalFolder displayName="icm42688" name="icm42688" projectFiles="true">
+        <logicalFolder name="icm42688" displayName="icm42688" projectFiles="true">
           <itemPath>../src/app_config/icm42688/icm42688_sensor.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder displayName="bmi160" name="bmi160" projectFiles="true">
+      <logicalFolder name="bmi160" displayName="bmi160" projectFiles="true">
         <itemPath>../bmi160/bmi160.c</itemPath>
       </logicalFolder>
-      <logicalFolder displayName="config" name="f1" projectFiles="true">
-        <logicalFolder displayName="SAMD21_IOT_WG_BMI160" name="f2" projectFiles="true">
-          <logicalFolder displayName="peripheral" name="f1" projectFiles="true">
-            <logicalFolder displayName="clock" name="f5" projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f2" displayName="SAMD21_IOT_WG_BMI160" projectFiles="true">
+          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f5" displayName="clock" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="eic" name="f8" projectFiles="true">
+            <logicalFolder name="f8" displayName="eic" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/eic/plib_eic.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="evsys" name="f3" projectFiles="true">
+            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="nvic" name="f6" projectFiles="true">
+            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="nvmctrl" name="f1" projectFiles="true">
+            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="port" name="f4" projectFiles="true">
+            <logicalFolder name="f4" displayName="port" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="sercom" name="f2" projectFiles="true">
-              <logicalFolder displayName="i2c_master" name="f1" projectFiles="true">
+            <logicalFolder name="f2" displayName="sercom" projectFiles="true">
+              <logicalFolder name="f1" displayName="i2c_master" projectFiles="true">
                 <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom1_i2c_master.c</itemPath>
               </logicalFolder>
-              <logicalFolder displayName="usart" name="f2" projectFiles="true">
+              <logicalFolder name="f2" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom5_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder displayName="systick" name="f7" projectFiles="true">
+            <logicalFolder name="f7" displayName="systick" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_BMI160/peripheral/systick/plib_systick.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="stdio" name="f2" projectFiles="true">
+          <logicalFolder name="f2" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/SAMD21_IOT_WG_BMI160/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
           <itemPath>../src/config/SAMD21_IOT_WG_BMI160/initialization.c</itemPath>
@@ -259,39 +271,41 @@
           <itemPath>../src/config/SAMD21_IOT_WG_BMI160/startup_xc32.c</itemPath>
           <itemPath>../src/config/SAMD21_IOT_WG_BMI160/libc_syscalls.c</itemPath>
         </logicalFolder>
-        <logicalFolder displayName="SAMD21_IOT_WG_ICM42688" name="f1" projectFiles="true">
-          <logicalFolder displayName="peripheral" name="f1" projectFiles="true">
-            <logicalFolder displayName="clock" name="f5" projectFiles="true">
+        <logicalFolder name="f1"
+                       displayName="SAMD21_IOT_WG_ICM42688"
+                       projectFiles="true">
+          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f5" displayName="clock" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="eic" name="f8" projectFiles="true">
+            <logicalFolder name="f8" displayName="eic" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/eic/plib_eic.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="evsys" name="f2" projectFiles="true">
+            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="nvic" name="f6" projectFiles="true">
+            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="nvmctrl" name="f1" projectFiles="true">
+            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="port" name="f4" projectFiles="true">
+            <logicalFolder name="f4" displayName="port" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="sercom" name="f3" projectFiles="true">
-              <logicalFolder displayName="spi_master" name="f1" projectFiles="true">
+            <logicalFolder name="f3" displayName="sercom" projectFiles="true">
+              <logicalFolder name="f1" displayName="spi_master" projectFiles="true">
                 <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.c</itemPath>
               </logicalFolder>
-              <logicalFolder displayName="usart" name="f2" projectFiles="true">
+              <logicalFolder name="f2" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom5_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder displayName="systick" name="f7" projectFiles="true">
+            <logicalFolder name="f7" displayName="systick" projectFiles="true">
               <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/peripheral/systick/plib_systick.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="stdio" name="f2" projectFiles="true">
+          <logicalFolder name="f2" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
           <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/initialization.c</itemPath>
@@ -301,7 +315,7 @@
           <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/libc_syscalls.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder displayName="Icm426xx" name="Icm426xx" projectFiles="true">
+      <logicalFolder name="Icm426xx" displayName="Icm426xx" projectFiles="true">
         <itemPath>../Icm426xx/Icm426xxDriver_HL.c</itemPath>
         <itemPath>../Icm426xx/Icm426xxDriver_HL_apex.c</itemPath>
         <itemPath>../Icm426xx/Icm426xxSelfTest.c</itemPath>
@@ -309,9 +323,14 @@
       </logicalFolder>
       <itemPath>../src/buffer.c</itemPath>
       <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/ssi_comms.c</itemPath>
     </logicalFolder>
-    <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="false">
-      <logicalFolder displayName="SAMD21_IOT_WG_BMI160.mhc" name="f1" projectFiles="true">
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <logicalFolder name="f1"
+                     displayName="SAMD21_IOT_WG_BMI160.mhc"
+                     projectFiles="true">
         <itemPath>../src/config/SAMD21_IOT_WG_BMI160/SAMD21_IOT_WG_BMI160.mhc/cmsis.yml</itemPath>
         <itemPath>../src/config/SAMD21_IOT_WG_BMI160/SAMD21_IOT_WG_BMI160.mhc/core.yml</itemPath>
         <itemPath>../src/config/SAMD21_IOT_WG_BMI160/SAMD21_IOT_WG_BMI160.mhc/dfp.yml</itemPath>
@@ -325,7 +344,9 @@
         <itemPath>../src/config/SAMD21_IOT_WG_BMI160/SAMD21_IOT_WG_BMI160.mhc/settings.yml</itemPath>
         <itemPath>../src/config/SAMD21_IOT_WG_BMI160/SAMD21_IOT_WG_BMI160.mhc/stdio.yml</itemPath>
       </logicalFolder>
-      <logicalFolder displayName="SAMD21_IOT_WG_ICM42688.mhc" name="f2" projectFiles="true">
+      <logicalFolder name="f2"
+                     displayName="SAMD21_IOT_WG_ICM42688.mhc"
+                     projectFiles="true">
         <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/SAMD21_IOT_WG_ICM42688.mhc/cmsis.yml</itemPath>
         <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/SAMD21_IOT_WG_ICM42688.mhc/core.yml</itemPath>
         <itemPath>../src/config/SAMD21_IOT_WG_ICM42688/SAMD21_IOT_WG_ICM42688.mhc/dfp.yml</itemPath>
@@ -362,12 +383,13 @@
         <targetPluginBoard/>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>3.00</languageToolchainVersion>
+        <languageToolchainVersion>3.01</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="SAMD21_DFP" vendor="Microchip" version="3.4.116"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="SAMD21_DFP" vendor="Microchip" version="3.3.98"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -381,7 +403,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>true</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
         </subordinates>
@@ -389,14 +411,14 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../Icm426xx/Icm426xxDefs.h">
+      <item path="../Icm426xx/Icm426xxDefs.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -412,7 +434,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/Icm426xxDriver_HL.c">
+      <item path="../Icm426xx/Icm426xxDriver_HL.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -428,7 +450,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/Icm426xxDriver_HL.h">
+      <item path="../Icm426xx/Icm426xxDriver_HL.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -444,7 +466,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/Icm426xxDriver_HL_apex.c">
+      <item path="../Icm426xx/Icm426xxDriver_HL_apex.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -460,7 +482,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/Icm426xxDriver_HL_apex.h">
+      <item path="../Icm426xx/Icm426xxDriver_HL_apex.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -476,7 +498,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/Icm426xxExtFunc.h">
+      <item path="../Icm426xx/Icm426xxExtFunc.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -492,7 +514,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/Icm426xxSelfTest.c">
+      <item path="../Icm426xx/Icm426xxSelfTest.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -508,7 +530,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/Icm426xxSelfTest.h">
+      <item path="../Icm426xx/Icm426xxSelfTest.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -524,7 +546,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/Icm426xxTransport.c">
+      <item path="../Icm426xx/Icm426xxTransport.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -540,7 +562,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/Icm426xxTransport.h">
+      <item path="../Icm426xx/Icm426xxTransport.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -556,7 +578,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/Icm426xxVersion.h">
+      <item path="../Icm426xx/Icm426xxVersion.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -572,7 +594,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/InvError.h">
+      <item path="../Icm426xx/InvError.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -588,7 +610,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../Icm426xx/InvExport.h">
+      <item path="../Icm426xx/InvExport.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -604,7 +626,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/app_config/icm42688/icm42688_sensor.c">
+      <item path="../src/app_config/icm42688/icm42688_sensor.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -620,7 +644,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/ATSAMD21G18A.ld">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/ATSAMD21G18A.ld"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -636,7 +662,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/definitions.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/definitions.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -652,7 +680,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/device.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/device.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -668,7 +698,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/device_cache.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/device_cache.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -684,7 +716,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/exceptions.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/exceptions.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -700,7 +734,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/initialization.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/initialization.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -716,7 +752,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/interrupts.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/interrupts.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -732,7 +770,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/libc_syscalls.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/libc_syscalls.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -748,7 +788,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/clock/plib_clock.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/clock/plib_clock.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -764,7 +806,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/clock/plib_clock.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/clock/plib_clock.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -780,7 +824,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/eic/plib_eic.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/eic/plib_eic.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -796,7 +842,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/eic/plib_eic.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/eic/plib_eic.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -812,7 +860,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -828,7 +878,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/evsys/plib_evsys.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -844,7 +896,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvic/plib_nvic.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvic/plib_nvic.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -860,7 +914,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvic/plib_nvic.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvic/plib_nvic.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -876,7 +932,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -892,7 +950,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/nvmctrl/plib_nvmctrl.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -908,7 +968,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/port/plib_port.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/port/plib_port.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -924,7 +986,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/port/plib_port.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/port/plib_port.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -940,7 +1004,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -956,7 +1022,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom0_spi_master.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -972,7 +1040,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -988,7 +1058,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom5_usart.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom5_usart.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1004,7 +1076,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom5_usart.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom5_usart.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1020,7 +1094,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom_usart_common.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/sercom/usart/plib_sercom_usart_common.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1036,7 +1112,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/systick/plib_systick.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/systick/plib_systick.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1052,7 +1130,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/systick/plib_systick.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/peripheral/systick/plib_systick.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1068,7 +1148,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/startup_xc32.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/startup_xc32.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1084,7 +1166,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/stdio/xc32_monitor.c">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/stdio/xc32_monitor.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1100,7 +1184,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_ICM42688/toolchain_specifics.h">
+      <item path="../src/config/SAMD21_IOT_WG_ICM42688/toolchain_specifics.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1128,7 +1214,8 @@
         <property key="memories.eeprom" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0x400000-0x5fffff"/>
         <property key="programoptions.eraseb4program" value="false"/>
@@ -1147,11 +1234,12 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/SAMD21_IOT_WG_BMI160;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/SAMD21_IOT_WG_BMI160;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
-        <property key="make-warnings-into-errors" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-O2"/>
         <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -1245,7 +1333,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/SAMD21_IOT_WG_BMI160;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/SAMD21_IOT_WG_BMI160;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -1307,7 +1396,8 @@
         <property key="TIMER3" value="true"/>
         <property key="TIMER4" value="true"/>
         <property key="TIMER5" value="true"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
@@ -1360,8 +1450,10 @@
         <property key="periphComp6.gte" value="gt"/>
         <property key="reset.scl" value="false"/>
         <property key="reset.type" value="MCLR"/>
-        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
         <property key="uart0io.output" value="window"/>
         <property key="uart0io.outputfile" value=""/>
         <property key="uart0io.uartioenabled" value="false"/>
@@ -1425,196 +1517,371 @@
         <property key="usartf1io.output" value="window"/>
         <property key="usartf1io.outputfile" value=""/>
         <property key="usartf1io.uartioenabled" value="false"/>
-        <property key="warningmessagebreakoptions.W0001_CORE_BITREV_MODULO_EN" value="report"/>
-        <property key="warningmessagebreakoptions.W0002_CORE_SECURE_MEMORYACCESS" value="report"/>
+        <property key="warningmessagebreakoptions.W0001_CORE_BITREV_MODULO_EN"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0002_CORE_SECURE_MEMORYACCESS"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0003_CORE_SW_RESET" value="report"/>
         <property key="warningmessagebreakoptions.W0004_CORE_WDT_RESET" value="report"/>
-        <property key="warningmessagebreakoptions.W0005_CORE_IOPUW_RESET" value="report"/>
-        <property key="warningmessagebreakoptions.W0006_CORE_CODE_GUARD_PFC_RESET" value="report"/>
-        <property key="warningmessagebreakoptions.W0007_CORE_DO_LOOP_STACK_UNDERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0008_CORE_DO_LOOP_STACK_OVERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0009_CORE_NESTED_DO_LOOP_RANGE" value="report"/>
-        <property key="warningmessagebreakoptions.W0010_CORE_SIM32_ODD_WORDACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0011_CORE_SIM32_UNIMPLEMENTED_RAMACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0012_CORE_STACK_OVERFLOW_RESET" value="report"/>
-        <property key="warningmessagebreakoptions.W0013_CORE_STACK_UNDERFLOW_RESET" value="report"/>
-        <property key="warningmessagebreakoptions.W0014_CORE_INVALID_OPCODE" value="report"/>
-        <property key="warningmessagebreakoptions.W0015_CORE_INVALID_ALT_WREG_SET" value="report"/>
-        <property key="warningmessagebreakoptions.W0016_CORE_STACK_ERROR" value="report"/>
-        <property key="warningmessagebreakoptions.W0017_CORE_ODD_RAMWORDACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0018_CORE_UNIMPLEMENTED_RAMACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0019_CORE_UNIMPLEMENTED_PROMACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0020_CORE_ACCESS_NOTIN_X_SPACE" value="report"/>
-        <property key="warningmessagebreakoptions.W0021_CORE_ACCESS_NOTIN_Y_SPACE" value="report"/>
-        <property key="warningmessagebreakoptions.W0022_CORE_XMODEND_LESS_XMODSRT" value="report"/>
-        <property key="warningmessagebreakoptions.W0023_CORE_YMODEND_LESS_YMODSRT" value="report"/>
-        <property key="warningmessagebreakoptions.W0024_CORE_BITREV_MOD_IS_ZERO" value="report"/>
+        <property key="warningmessagebreakoptions.W0005_CORE_IOPUW_RESET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0006_CORE_CODE_GUARD_PFC_RESET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0007_CORE_DO_LOOP_STACK_UNDERFLOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0008_CORE_DO_LOOP_STACK_OVERFLOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0009_CORE_NESTED_DO_LOOP_RANGE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0010_CORE_SIM32_ODD_WORDACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0011_CORE_SIM32_UNIMPLEMENTED_RAMACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0012_CORE_STACK_OVERFLOW_RESET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0013_CORE_STACK_UNDERFLOW_RESET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0014_CORE_INVALID_OPCODE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0015_CORE_INVALID_ALT_WREG_SET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0016_CORE_STACK_ERROR"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0017_CORE_ODD_RAMWORDACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0018_CORE_UNIMPLEMENTED_RAMACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0019_CORE_UNIMPLEMENTED_PROMACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0020_CORE_ACCESS_NOTIN_X_SPACE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0021_CORE_ACCESS_NOTIN_Y_SPACE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0022_CORE_XMODEND_LESS_XMODSRT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0023_CORE_YMODEND_LESS_YMODSRT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0024_CORE_BITREV_MOD_IS_ZERO"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0025_CORE_HARD_TRAP" value="report"/>
-        <property key="warningmessagebreakoptions.W0026_CORE_UNIMPLEMENTED_MEMORYACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0027_CORE_UNIMPLEMENTED_EDSACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0028_TBLRD_WORM_CONFIG_MEMORY" value="report"/>
+        <property key="warningmessagebreakoptions.W0026_CORE_UNIMPLEMENTED_MEMORYACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0027_CORE_UNIMPLEMENTED_EDSACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0028_TBLRD_WORM_CONFIG_MEMORY"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0029_TBLRD_DEVICE_ID" value="report"/>
-        <property key="warningmessagebreakoptions.W0030_CORE_UNIMPLEMENTED_MEMORY_ACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0031_BSLIM_INSUFFICIENT_BOOT_SEGMENT" value="report"/>
-        <property key="warningmessagebreakoptions.W0032_BSLIM_LIMITS_EXCEEDS_PROG_MEMORY" value="report"/>
-        <property key="warningmessagebreakoptions.W0033_CORE_UNPREDICTABLE_OPCODE" value="report"/>
-        <property key="warningmessagebreakoptions.W0034_CORE_UNALIGNED_MEMORY_ACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0035_CORE_UNIMPLEMENTED_RAMACCESS_NOTRAP" value="report"/>
-        <property key="warningmessagebreakoptions.W0040_FPU_DIFF_CP10_CP11" value="report"/>
-        <property key="warningmessagebreakoptions.W0041_FPU_ACCESS_DENIED" value="report"/>
-        <property key="warningmessagebreakoptions.W0042_FPU_PRIVILEGED_ACCESS_ONLY" value="report"/>
-        <property key="warningmessagebreakoptions.W0043_FPU_CP_RESERVED_VALUE" value="report"/>
-        <property key="warningmessagebreakoptions.W0044_FPU_OUT_OF_RANGE" value="report"/>
-        <property key="warningmessagebreakoptions.W0051_INSTRUCTION_DIV_NOT_ENOUGH_REPEAT" value="report"/>
-        <property key="warningmessagebreakoptions.W0052_INSTRUCTION_DIV_TOO_MANY_REPEAT" value="report"/>
-        <property key="warningmessagebreakoptions.W0053_INVALID_INTCON_VS_FIELD_VALUE" value="report"/>
-        <property key="warningmessagebreakoptions.W0101_SIM_UPDATE_FAILED" value="report"/>
-        <property key="warningmessagebreakoptions.W0102_SIM_PERIPH_MISSING" value="report"/>
-        <property key="warningmessagebreakoptions.W0103_SIM_PERIPH_FAILED" value="report"/>
-        <property key="warningmessagebreakoptions.W0104_SIM_FAILED_TO_INIT_TOOL" value="report"/>
-        <property key="warningmessagebreakoptions.W0105_SIM_INVALID_FIELD" value="report"/>
-        <property key="warningmessagebreakoptions.W0106_SIM_PERIPH_PARTIAL_SUPPORT" value="report"/>
-        <property key="warningmessagebreakoptions.W0107_SIM_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0108_SIM_RESERVED_SETTING" value="report"/>
-        <property key="warningmessagebreakoptions.W0109_SIM_PERIPHERAL_IN_DEVELOPMENT" value="report"/>
-        <property key="warningmessagebreakoptions.W0110_SIM_UNEXPECTED_EVENT" value="report"/>
-        <property key="warningmessagebreakoptions.W0111_SIM_UNSUPPORTED_SELECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W0112_SIM_INVALID_OPERATION" value="report"/>
-        <property key="warningmessagebreakoptions.W0113_SIM_WRITE_TO_PROTECTED_SFR" value="report"/>
+        <property key="warningmessagebreakoptions.W0030_CORE_UNIMPLEMENTED_MEMORY_ACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0031_BSLIM_INSUFFICIENT_BOOT_SEGMENT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0032_BSLIM_LIMITS_EXCEEDS_PROG_MEMORY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0033_CORE_UNPREDICTABLE_OPCODE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0034_CORE_UNALIGNED_MEMORY_ACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0035_CORE_UNIMPLEMENTED_RAMACCESS_NOTRAP"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0040_FPU_DIFF_CP10_CP11"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0041_FPU_ACCESS_DENIED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0042_FPU_PRIVILEGED_ACCESS_ONLY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0043_FPU_CP_RESERVED_VALUE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0044_FPU_OUT_OF_RANGE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0051_INSTRUCTION_DIV_NOT_ENOUGH_REPEAT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0052_INSTRUCTION_DIV_TOO_MANY_REPEAT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0053_INVALID_INTCON_VS_FIELD_VALUE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0101_SIM_UPDATE_FAILED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0102_SIM_PERIPH_MISSING"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0103_SIM_PERIPH_FAILED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0104_SIM_FAILED_TO_INIT_TOOL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0105_SIM_INVALID_FIELD"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0106_SIM_PERIPH_PARTIAL_SUPPORT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0107_SIM_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0108_SIM_RESERVED_SETTING"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0109_SIM_PERIPHERAL_IN_DEVELOPMENT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0110_SIM_UNEXPECTED_EVENT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0111_SIM_UNSUPPORTED_SELECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0112_SIM_INVALID_OPERATION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0113_SIM_WRITE_TO_PROTECTED_SFR"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0114_SIM_INVALID_KEY" value="report"/>
-        <property key="warningmessagebreakoptions.W0115_SIM_FAILED_TO_PARSE_DEVICE_FILE" value="report"/>
-        <property key="warningmessagebreakoptions.W0116_SIM_STACK_OVERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0117_SIM_STACK_UNDERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0118_SIM_INVALID_FIELD_VALUE" value="report"/>
-        <property key="warningmessagebreakoptions.W0119_SIM_SAMPLING_RATE_VIOLATION" value="report"/>
-        <property key="warningmessagebreakoptions.W0201_ADC_NO_STIMULUS_FILE" value="report"/>
+        <property key="warningmessagebreakoptions.W0115_SIM_FAILED_TO_PARSE_DEVICE_FILE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0116_SIM_STACK_OVERFLOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0117_SIM_STACK_UNDERFLOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0118_SIM_INVALID_FIELD_VALUE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0119_SIM_SAMPLING_RATE_VIOLATION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0201_ADC_NO_STIMULUS_FILE"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0202_ADC_GO_DONE_BIT" value="report"/>
-        <property key="warningmessagebreakoptions.W0203_ADC_MINIMUM_2_TAD" value="report"/>
-        <property key="warningmessagebreakoptions.W0204_ADC_TAD_TOO_SMALL" value="report"/>
-        <property key="warningmessagebreakoptions.W0205_ADC_UNEXPECTED_TRANSITION" value="report"/>
-        <property key="warningmessagebreakoptions.W0206_ADC_SAMP_TIME_TOO_SHORT" value="report"/>
-        <property key="warningmessagebreakoptions.W0207_ADC_NO_PINS_SCANNED" value="report"/>
-        <property key="warningmessagebreakoptions.W0208_ADC_UNSUPPORTED_CLOCK_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W0209_ADC_ANALOG_CHANNEL_DIGITAL" value="report"/>
-        <property key="warningmessagebreakoptions.W0210_ADC_ANALOG_CHANNEL_OUTPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0211_ADC_PIN_INVALID_CHANNEL" value="report"/>
-        <property key="warningmessagebreakoptions.W0212_ADC_BAND_GAP_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0213_ADC_RESERVED_SSRC" value="report"/>
-        <property key="warningmessagebreakoptions.W0214_ADC_POSITIVE_INPUT_DIGITAL" value="report"/>
-        <property key="warningmessagebreakoptions.W0215_ADC_POSITIVE_INPUT_OUTPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0216_ADC_NEGATIVE_INPUT_DIGITAL" value="report"/>
-        <property key="warningmessagebreakoptions.W0217_ADC_NEGATIVE_INPUT_OUTPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0218_ADC_REFERENCE_HIGH_DIGITAL" value="report"/>
-        <property key="warningmessagebreakoptions.W0219_ADC_REFERENCE_HIGH_OUTPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0220_ADC_REFERENCE_LOW_DIGITAL" value="report"/>
-        <property key="warningmessagebreakoptions.W0221_ADC_REFERENCE_LOW_OUTPUT" value="report"/>
+        <property key="warningmessagebreakoptions.W0203_ADC_MINIMUM_2_TAD"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0204_ADC_TAD_TOO_SMALL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0205_ADC_UNEXPECTED_TRANSITION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0206_ADC_SAMP_TIME_TOO_SHORT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0207_ADC_NO_PINS_SCANNED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0208_ADC_UNSUPPORTED_CLOCK_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0209_ADC_ANALOG_CHANNEL_DIGITAL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0210_ADC_ANALOG_CHANNEL_OUTPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0211_ADC_PIN_INVALID_CHANNEL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0212_ADC_BAND_GAP_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0213_ADC_RESERVED_SSRC"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0214_ADC_POSITIVE_INPUT_DIGITAL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0215_ADC_POSITIVE_INPUT_OUTPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0216_ADC_NEGATIVE_INPUT_DIGITAL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0217_ADC_NEGATIVE_INPUT_OUTPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0218_ADC_REFERENCE_HIGH_DIGITAL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0219_ADC_REFERENCE_HIGH_OUTPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0220_ADC_REFERENCE_LOW_DIGITAL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0221_ADC_REFERENCE_LOW_OUTPUT"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0222_ADC_OVERFLOW" value="report"/>
         <property key="warningmessagebreakoptions.W0223_ADC_UNDERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0224_ADC_CTMU_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0225_ADC_INVALID_CH0S" value="report"/>
-        <property key="warningmessagebreakoptions.W0226_ADC_VBAT_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0227_ADC_INVALID_ADCS" value="report"/>
-        <property key="warningmessagebreakoptions.W0228_ADC_INVALID_ADCS" value="report"/>
-        <property key="warningmessagebreakoptions.W0229_ADC_INVALID_ADCS" value="report"/>
-        <property key="warningmessagebreakoptions.W0230_ADC_TRIGSEL_NOT_SUPPORTED" value="report"/>
+        <property key="warningmessagebreakoptions.W0224_ADC_CTMU_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0225_ADC_INVALID_CH0S"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0226_ADC_VBAT_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0227_ADC_INVALID_ADCS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0228_ADC_INVALID_ADCS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0229_ADC_INVALID_ADCS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0230_ADC_TRIGSEL_NOT_SUPPORTED"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0231_ADC_NOT_WARMED" value="report"/>
-        <property key="warningmessagebreakoptions.W0232_ADC_CALIBRATION_ABORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0233_ADC_CORE_POWERED_EARLY" value="report"/>
-        <property key="warningmessagebreakoptions.W0234_ADC_ALREADY_CALIBRATING" value="report"/>
-        <property key="warningmessagebreakoptions.W0235_ADC_CAL_TYPE_CHANGED" value="report"/>
-        <property key="warningmessagebreakoptions.W0236_ADC_CAL_INVALIDATED" value="report"/>
-        <property key="warningmessagebreakoptions.W0237_ADC_UNKNOWN_DATASHEET" value="report"/>
-        <property key="warningmessagebreakoptions.W0238_ADC_INVALID_SFR_FIELD_VALUE" value="report"/>
-        <property key="warningmessagebreakoptions.W0239_ADC_UNSUPPORTED_INPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0240_ADC_NOT_CALIBRATED" value="report"/>
-        <property key="warningmessagebreakoptions.W0241_ADC_FRACTIONAL_NOT_ALLOWED" value="report"/>
-        <property key="warningmessagebreakoptions.W0242_ADC_BG_INT_BEFORE_PWR" value="report"/>
+        <property key="warningmessagebreakoptions.W0232_ADC_CALIBRATION_ABORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0233_ADC_CORE_POWERED_EARLY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0234_ADC_ALREADY_CALIBRATING"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0235_ADC_CAL_TYPE_CHANGED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0236_ADC_CAL_INVALIDATED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0237_ADC_UNKNOWN_DATASHEET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0238_ADC_INVALID_SFR_FIELD_VALUE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0239_ADC_UNSUPPORTED_INPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0240_ADC_NOT_CALIBRATED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0241_ADC_FRACTIONAL_NOT_ALLOWED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0242_ADC_BG_INT_BEFORE_PWR"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0243_ADC_INVALID_TAD" value="report"/>
-        <property key="warningmessagebreakoptions.W0244_ADC_CONVERSION_ABORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0245_ADC_BUFREGEN_NOT_ALLOWED" value="report"/>
-        <property key="warningmessagebreakoptions.W0246_ADC_ACCUMULATION_BAD_RESSEL" value="report"/>
-        <property key="warningmessagebreakoptions.W0247_ADC_CONVERSION_BAD_RESSEL" value="report"/>
-        <property key="warningmessagebreakoptions.W0400_PWM_PWM_FASTER_THAN_FOSC" value="report"/>
-        <property key="warningmessagebreakoptions.W0600_WDT_2ND_WDT_MR_WRITE" value="report"/>
+        <property key="warningmessagebreakoptions.W0244_ADC_CONVERSION_ABORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0245_ADC_BUFREGEN_NOT_ALLOWED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0246_ADC_ACCUMULATION_BAD_RESSEL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0247_ADC_CONVERSION_BAD_RESSEL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0400_PWM_PWM_FASTER_THAN_FOSC"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0600_WDT_2ND_WDT_MR_WRITE"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0601_WDT_EXPIRED" value="report"/>
-        <property key="warningmessagebreakoptions.W0601_WDT_RESET_OUTSIDE_WINDOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0700_CLC_GENERAL_WARNING" value="report"/>
-        <property key="warningmessagebreakoptions.W0701_CLC_CLCOUT_AS_INPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0702_CLC_CIRCULAR_LOOP" value="report"/>
-        <property key="warningmessagebreakoptions.W0800_ACC_INPUT_INVALID_CONFIG" value="report"/>
-        <property key="warningmessagebreakoptions.W0801_ACC_INPUT_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0802_ACC_INVERTED_WINDOW_LIMITS" value="report"/>
-        <property key="warningmessagebreakoptions.W0803_ACC_MISMATCHED_POS_INPUTS" value="report"/>
-        <property key="warningmessagebreakoptions.W0804_ACC_WINDOW_COMP_DISABLED" value="report"/>
-        <property key="warningmessagebreakoptions.W0805_ACC_WINDOW_COMPS_MODES" value="report"/>
-        <property key="warningmessagebreakoptions.W0806_ACC_FEATURE_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W10001_RESERVED_IRQ_HANDLER_INVOKED" value="report"/>
-        <property key="warningmessagebreakoptions.W10002_UNSUPPORTED_CLK_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W10101_UNSUPPORTED_CHANNEL_MODE" value="report"/>
-        <property key="warningmessagebreakoptions.W10102_UNSUPPORTED_CLK_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W10103_UNSUPPORTED_RECEIVER_FILTER" value="report"/>
-        <property key="warningmessagebreakoptions.W10301_NO_PORT_PINS_FOUND" value="report"/>
-        <property key="warningmessagebreakoptions.W10500_UNSUPPORTED_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W1201_DATAFLASH_MEM_OUTSIDE_RANGE" value="report"/>
-        <property key="warningmessagebreakoptions.W1202_DATAFLASH_ERASE_WHILE_LOCKED" value="report"/>
-        <property key="warningmessagebreakoptions.W1203_DATAFLASH_WRITE_WHILE_LOCKED" value="report"/>
-        <property key="warningmessagebreakoptions.W1401_DMA_PERIPH_NOT_AVAIL" value="report"/>
+        <property key="warningmessagebreakoptions.W0601_WDT_RESET_OUTSIDE_WINDOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0700_CLC_GENERAL_WARNING"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0701_CLC_CLCOUT_AS_INPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0702_CLC_CIRCULAR_LOOP"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0800_ACC_INPUT_INVALID_CONFIG"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0801_ACC_INPUT_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0802_ACC_INVERTED_WINDOW_LIMITS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0803_ACC_MISMATCHED_POS_INPUTS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0804_ACC_WINDOW_COMP_DISABLED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0805_ACC_WINDOW_COMPS_MODES"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0806_ACC_FEATURE_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10001_RESERVED_IRQ_HANDLER_INVOKED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10002_UNSUPPORTED_CLK_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10101_UNSUPPORTED_CHANNEL_MODE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10102_UNSUPPORTED_CLK_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10103_UNSUPPORTED_RECEIVER_FILTER"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10301_NO_PORT_PINS_FOUND"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10500_UNSUPPORTED_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1201_DATAFLASH_MEM_OUTSIDE_RANGE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1202_DATAFLASH_ERASE_WHILE_LOCKED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1203_DATAFLASH_WRITE_WHILE_LOCKED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1401_DMA_PERIPH_NOT_AVAIL"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W1402_DMA_INVALID_IRQ" value="report"/>
         <property key="warningmessagebreakoptions.W1403_DMA_INVALID_SFR" value="report"/>
-        <property key="warningmessagebreakoptions.W1404_DMA_INVALID_DMA_ADDR" value="report"/>
-        <property key="warningmessagebreakoptions.W1405_DMA_IRQ_DIR_MISMATCH" value="report"/>
+        <property key="warningmessagebreakoptions.W1404_DMA_INVALID_DMA_ADDR"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1405_DMA_IRQ_DIR_MISMATCH"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W1600_PPS_INVALID_MAP" value="report"/>
-        <property key="warningmessagebreakoptions.W1601_PPS_INVALID_PIN_DESCRIPTION" value="report"/>
-        <property key="warningmessagebreakoptions.W1800_PWM_TIMER_SELECTION_NOT_AVIALABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W1801_PWM_TIMER_SELECTION_BAD_CLOCK_INPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W1802_PWM_TIMER_MISSING_PERSCALER_INFO" value="report"/>
-        <property key="warningmessagebreakoptions.W2001_INPUTCAPTURE_TMR3_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W2002_INPUTCAPTURE_CAPTURE_EMPTY" value="report"/>
-        <property key="warningmessagebreakoptions.W2003_INPUTCAPTURE_SYNCSEL_NOT_AVIALABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W2004_INPUTCAPTURE_BAD_SYNC_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W2501_OUTPUTCOMPARE_SYNCSEL_NOT_AVIALABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W2502_OUTPUTCOMPARE_BAD_SYNC_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W2503_OUTPUTCOMPARE_BAD_TRIGGER_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W2700_MPU_ILLEGAL_DREGION" value="report"/>
-        <property key="warningmessagebreakoptions.W2701_MPU_INVALID_REGION" value="report"/>
-        <property key="warningmessagebreakoptions.W3000_LPM_READ_PROTECTION_SECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W3010_SPM_WRITE_PROTECTION_SECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W6001_RTT_FORBIDDEN_RTPRES" value="report"/>
-        <property key="warningmessagebreakoptions.W6002_RTT_BAD_WRITING_ALMV" value="report"/>
-        <property key="warningmessagebreakoptions.W6003_RTT_BAD_WRITING_RTPRES" value="report"/>
-        <property key="warningmessagebreakoptions.W7001_SMT_CLK_SELECTION_NOT_SUPPORT" value="report"/>
-        <property key="warningmessagebreakoptions.W7002_SMT_SIG_SELECTION_NOT_SUPPORT" value="report"/>
-        <property key="warningmessagebreakoptions.W7003_SMT_WIN_SELECTION_NOT_SUPPORT" value="report"/>
-        <property key="warningmessagebreakoptions.W8001_OSC_INVALID_CLOCK_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W8002_OSC_RESERVED_FEXTOSC" value="report"/>
-        <property key="warningmessagebreakoptions.W9001_TMR_GATE_AND_EXTCLOCK_ENABLED" value="report"/>
-        <property key="warningmessagebreakoptions.W9002_TMR_NO_PIN_AVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9003_TMR_INVALID_CLOCK_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W9201_UART_TX_OVERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W9202_UART_TX_CAPTUREFILE" value="report"/>
-        <property key="warningmessagebreakoptions.W9203_UART_TX_INVALIDINTERRUPTMODE" value="report"/>
-        <property key="warningmessagebreakoptions.W9204_UART_RX_EMPTY_QUEUE" value="report"/>
+        <property key="warningmessagebreakoptions.W1601_PPS_INVALID_PIN_DESCRIPTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1800_PWM_TIMER_SELECTION_NOT_AVIALABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1801_PWM_TIMER_SELECTION_BAD_CLOCK_INPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1802_PWM_TIMER_MISSING_PERSCALER_INFO"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2001_INPUTCAPTURE_TMR3_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2002_INPUTCAPTURE_CAPTURE_EMPTY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2003_INPUTCAPTURE_SYNCSEL_NOT_AVIALABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2004_INPUTCAPTURE_BAD_SYNC_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2501_OUTPUTCOMPARE_SYNCSEL_NOT_AVIALABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2502_OUTPUTCOMPARE_BAD_SYNC_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2503_OUTPUTCOMPARE_BAD_TRIGGER_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2700_MPU_ILLEGAL_DREGION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2701_MPU_INVALID_REGION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W3000_LPM_READ_PROTECTION_SECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W3010_SPM_WRITE_PROTECTION_SECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W6001_RTT_FORBIDDEN_RTPRES"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W6002_RTT_BAD_WRITING_ALMV"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W6003_RTT_BAD_WRITING_RTPRES"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W7001_SMT_CLK_SELECTION_NOT_SUPPORT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W7002_SMT_SIG_SELECTION_NOT_SUPPORT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W7003_SMT_WIN_SELECTION_NOT_SUPPORT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W8001_OSC_INVALID_CLOCK_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W8002_OSC_RESERVED_FEXTOSC"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9001_TMR_GATE_AND_EXTCLOCK_ENABLED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9002_TMR_NO_PIN_AVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9003_TMR_INVALID_CLOCK_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9201_UART_TX_OVERFLOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9202_UART_TX_CAPTUREFILE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9203_UART_TX_INVALIDINTERRUPTMODE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9204_UART_RX_EMPTY_QUEUE"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W9205_UART_TX_BADFILE" value="report"/>
-        <property key="warningmessagebreakoptions.W9206_UART_RESERVED_MODE" value="report"/>
-        <property key="warningmessagebreakoptions.W9207_UART_UNABLETOCLOSE_FILE" value="report"/>
-        <property key="warningmessagebreakoptions.W9401_CVREF_INVALIDSOURCESELECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W9402_CVREF_INPUT_OUTPUTPINCONFLICT" value="report"/>
-        <property key="warningmessagebreakoptions.W9601_COMP_FVR_SOURCE_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9602_COMP_DAC_SOURCE_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9603_COMP_CVREF_SOURCE_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9604_COMP_SLOPE_SOURCE_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9605_COMP_PRG_SOURCE_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9607_COMP_DGTL_FLTR_OPTION_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9609_COMP_DGTL_FLTR_CLK_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9801_FVR_INVALID_MODE_SELECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W9801_SCL_BAD_SUBTYPE_INDICATION" value="report"/>
-        <property key="warningmessagebreakoptions.W9802_SCL_FILE_NOT_FOUND" value="report"/>
-        <property key="warningmessagebreakoptions.W9803_SCL_FAILED_TO_READ_FILE" value="report"/>
-        <property key="warningmessagebreakoptions.W9804_SCL_UNRECOGNIZED_LABEL" value="report"/>
-        <property key="warningmessagebreakoptions.W9805_SCL_UNRECOGNIZED_VAR" value="report"/>
-        <property key="warningmessagebreakoptions.W9901_RTSP_INVALID_OPERATION_SELECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W9902_RTSP_FLASH_PROGRAM_WRITE_PROTECTED" value="report"/>
-        <property key="warningmessagebreakoptions.displaywarningmessagesoption" value=""/>
+        <property key="warningmessagebreakoptions.W9206_UART_RESERVED_MODE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9207_UART_UNABLETOCLOSE_FILE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9401_CVREF_INVALIDSOURCESELECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9402_CVREF_INPUT_OUTPUTPINCONFLICT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9601_COMP_FVR_SOURCE_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9602_COMP_DAC_SOURCE_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9603_COMP_CVREF_SOURCE_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9604_COMP_SLOPE_SOURCE_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9605_COMP_PRG_SOURCE_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9607_COMP_DGTL_FLTR_OPTION_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9609_COMP_DGTL_FLTR_CLK_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9801_FVR_INVALID_MODE_SELECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9801_SCL_BAD_SUBTYPE_INDICATION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9802_SCL_FILE_NOT_FOUND"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9803_SCL_FAILED_TO_READ_FILE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9804_SCL_UNRECOGNIZED_LABEL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9805_SCL_UNRECOGNIZED_VAR"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9901_RTSP_INVALID_OPERATION_SELECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9902_RTSP_FLASH_PROGRAM_WRITE_PROTECTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.displaywarningmessagesoption"
+                  value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
       <Tool>
@@ -1662,17 +1929,16 @@
       </Tool>
       <nEdbgTool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="arm.use_vtor" value="false"/>
-        <property key="arm.vtor_adr" value="exception_table"/>
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.speed" value="2.000"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.path" value="Press to browse for a specific firmware version"/>
-        <property key="firmware.toolpack" value="Press to select which tool pack to use"/>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="firmware.path"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="firmware.toolpack"
+                  value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
         <property key="freeze.timers" value="false"/>
-        <property key="lastid" value=""/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -1682,25 +1948,28 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-3ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/sensiml/samd21-iot-imu-data-logger/firmware/samd21_iot_imu.X/debug/SAMD21_IOT_WG_BMI160/samd21_iot_imu_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
-        <property key="script.log_level" value="0"/>
-        <property key="script.reset_delay" value="0"/>
-        <property key="script.show_output" value="false"/>
-        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value=""/>
       </nEdbgTool>
     </conf>
@@ -1712,7 +1981,7 @@
         <targetPluginBoard/>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>3.00</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -1731,7 +2000,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>true</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
         </subordinates>
@@ -1739,14 +2008,14 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../bmi160/bmi160.c">
+      <item path="../bmi160/bmi160.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1762,7 +2031,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../bmi160/bmi160.h">
+      <item path="../bmi160/bmi160.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1778,7 +2047,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../bmi160/bmi160_defs.h">
+      <item path="../bmi160/bmi160_defs.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1794,7 +2063,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/app_config/bmi160/bmi160_sensor.c">
+      <item path="../src/app_config/bmi160/bmi160_sensor.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1810,7 +2081,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/ATSAMD21G18A.ld">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/ATSAMD21G18A.ld"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1826,7 +2099,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/definitions.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/definitions.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1842,7 +2117,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/device.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/device.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1858,7 +2135,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/device_cache.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/device_cache.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1874,7 +2153,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/exceptions.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/exceptions.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1890,7 +2171,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/initialization.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/initialization.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1906,7 +2189,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/interrupts.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/interrupts.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1922,7 +2207,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/libc_syscalls.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/libc_syscalls.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1938,7 +2225,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/clock/plib_clock.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/clock/plib_clock.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1954,7 +2243,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/clock/plib_clock.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/clock/plib_clock.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1970,7 +2261,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/eic/plib_eic.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/eic/plib_eic.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1986,7 +2279,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/eic/plib_eic.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/eic/plib_eic.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2002,7 +2297,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/evsys/plib_evsys.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/evsys/plib_evsys.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2018,7 +2315,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/evsys/plib_evsys.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/evsys/plib_evsys.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2034,7 +2333,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvic/plib_nvic.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvic/plib_nvic.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2050,7 +2351,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvic/plib_nvic.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvic/plib_nvic.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2066,7 +2369,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvmctrl/plib_nvmctrl.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvmctrl/plib_nvmctrl.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2082,7 +2387,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvmctrl/plib_nvmctrl.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/nvmctrl/plib_nvmctrl.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2098,7 +2405,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/port/plib_port.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/port/plib_port.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2114,7 +2423,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/port/plib_port.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/port/plib_port.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2130,7 +2441,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom1_i2c_master.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom1_i2c_master.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2146,7 +2459,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom1_i2c_master.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom1_i2c_master.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2162,7 +2477,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2178,7 +2495,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom5_usart.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom5_usart.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2194,7 +2513,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom5_usart.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom5_usart.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2210,7 +2531,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom_usart_common.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart/plib_sercom_usart_common.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2226,7 +2549,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/systick/plib_systick.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/systick/plib_systick.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2242,7 +2567,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/systick/plib_systick.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/peripheral/systick/plib_systick.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2258,7 +2585,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/startup_xc32.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/startup_xc32.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2274,7 +2603,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/stdio/xc32_monitor.c">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/stdio/xc32_monitor.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2290,7 +2621,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/config/SAMD21_IOT_WG_BMI160/toolchain_specifics.h">
+      <item path="../src/config/SAMD21_IOT_WG_BMI160/toolchain_specifics.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2306,7 +2639,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/ac.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/ac.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2322,7 +2657,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/adc.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/adc.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2338,7 +2675,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/dac.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/dac.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2354,7 +2693,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/dmac.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/dmac.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2370,7 +2711,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/dsu.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/dsu.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2386,7 +2729,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/eic.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/eic.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2402,7 +2747,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/evsys.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/evsys.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2418,7 +2765,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/gclk.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/gclk.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2434,7 +2783,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/hmatrixb.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/hmatrixb.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2450,7 +2801,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/i2s.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/i2s.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2466,7 +2819,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/mtb.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/mtb.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2482,7 +2837,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/nvmctrl.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/nvmctrl.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2498,7 +2855,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/pac.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/pac.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2514,7 +2873,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/pm.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/pm.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2530,7 +2891,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/port.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/port.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2546,7 +2909,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/ptc.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/ptc.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2562,7 +2927,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/rtc.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/rtc.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2578,7 +2945,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/sercom.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/sercom.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2594,7 +2963,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/sysctrl.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/sysctrl.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2610,7 +2981,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/tc.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/tc.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2626,7 +2999,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/tcc.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/tcc.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2642,7 +3017,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/usb.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/usb.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2658,7 +3035,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/component/wdt.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/component/wdt.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2674,7 +3053,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/packs/ATSAMD21G18A_DFP/pio/samd21g18a.h">
+      <item path="../src/packs/ATSAMD21G18A_DFP/pio/samd21g18a.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2702,7 +3083,8 @@
         <property key="memories.eeprom" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0x400000-0x5fffff"/>
         <property key="programoptions.eraseb4program" value="false"/>
@@ -2721,7 +3103,8 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/SAMD21_IOT_WG_ICM42688;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/SAMD21_IOT_WG_ICM42688;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -2819,7 +3202,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/SAMD21_IOT_WG_ICM42688;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/SAMD21_IOT_WG_ICM42688;../src/packs/ATSAMD21G18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -2881,7 +3265,8 @@
         <property key="TIMER3" value="true"/>
         <property key="TIMER4" value="true"/>
         <property key="TIMER5" value="true"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
@@ -2934,8 +3319,10 @@
         <property key="periphComp6.gte" value="gt"/>
         <property key="reset.scl" value="false"/>
         <property key="reset.type" value="MCLR"/>
-        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
         <property key="uart0io.output" value="window"/>
         <property key="uart0io.outputfile" value=""/>
         <property key="uart0io.uartioenabled" value="false"/>
@@ -2999,196 +3386,371 @@
         <property key="usartf1io.output" value="window"/>
         <property key="usartf1io.outputfile" value=""/>
         <property key="usartf1io.uartioenabled" value="false"/>
-        <property key="warningmessagebreakoptions.W0001_CORE_BITREV_MODULO_EN" value="report"/>
-        <property key="warningmessagebreakoptions.W0002_CORE_SECURE_MEMORYACCESS" value="report"/>
+        <property key="warningmessagebreakoptions.W0001_CORE_BITREV_MODULO_EN"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0002_CORE_SECURE_MEMORYACCESS"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0003_CORE_SW_RESET" value="report"/>
         <property key="warningmessagebreakoptions.W0004_CORE_WDT_RESET" value="report"/>
-        <property key="warningmessagebreakoptions.W0005_CORE_IOPUW_RESET" value="report"/>
-        <property key="warningmessagebreakoptions.W0006_CORE_CODE_GUARD_PFC_RESET" value="report"/>
-        <property key="warningmessagebreakoptions.W0007_CORE_DO_LOOP_STACK_UNDERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0008_CORE_DO_LOOP_STACK_OVERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0009_CORE_NESTED_DO_LOOP_RANGE" value="report"/>
-        <property key="warningmessagebreakoptions.W0010_CORE_SIM32_ODD_WORDACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0011_CORE_SIM32_UNIMPLEMENTED_RAMACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0012_CORE_STACK_OVERFLOW_RESET" value="report"/>
-        <property key="warningmessagebreakoptions.W0013_CORE_STACK_UNDERFLOW_RESET" value="report"/>
-        <property key="warningmessagebreakoptions.W0014_CORE_INVALID_OPCODE" value="report"/>
-        <property key="warningmessagebreakoptions.W0015_CORE_INVALID_ALT_WREG_SET" value="report"/>
-        <property key="warningmessagebreakoptions.W0016_CORE_STACK_ERROR" value="report"/>
-        <property key="warningmessagebreakoptions.W0017_CORE_ODD_RAMWORDACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0018_CORE_UNIMPLEMENTED_RAMACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0019_CORE_UNIMPLEMENTED_PROMACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0020_CORE_ACCESS_NOTIN_X_SPACE" value="report"/>
-        <property key="warningmessagebreakoptions.W0021_CORE_ACCESS_NOTIN_Y_SPACE" value="report"/>
-        <property key="warningmessagebreakoptions.W0022_CORE_XMODEND_LESS_XMODSRT" value="report"/>
-        <property key="warningmessagebreakoptions.W0023_CORE_YMODEND_LESS_YMODSRT" value="report"/>
-        <property key="warningmessagebreakoptions.W0024_CORE_BITREV_MOD_IS_ZERO" value="report"/>
+        <property key="warningmessagebreakoptions.W0005_CORE_IOPUW_RESET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0006_CORE_CODE_GUARD_PFC_RESET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0007_CORE_DO_LOOP_STACK_UNDERFLOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0008_CORE_DO_LOOP_STACK_OVERFLOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0009_CORE_NESTED_DO_LOOP_RANGE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0010_CORE_SIM32_ODD_WORDACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0011_CORE_SIM32_UNIMPLEMENTED_RAMACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0012_CORE_STACK_OVERFLOW_RESET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0013_CORE_STACK_UNDERFLOW_RESET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0014_CORE_INVALID_OPCODE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0015_CORE_INVALID_ALT_WREG_SET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0016_CORE_STACK_ERROR"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0017_CORE_ODD_RAMWORDACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0018_CORE_UNIMPLEMENTED_RAMACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0019_CORE_UNIMPLEMENTED_PROMACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0020_CORE_ACCESS_NOTIN_X_SPACE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0021_CORE_ACCESS_NOTIN_Y_SPACE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0022_CORE_XMODEND_LESS_XMODSRT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0023_CORE_YMODEND_LESS_YMODSRT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0024_CORE_BITREV_MOD_IS_ZERO"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0025_CORE_HARD_TRAP" value="report"/>
-        <property key="warningmessagebreakoptions.W0026_CORE_UNIMPLEMENTED_MEMORYACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0027_CORE_UNIMPLEMENTED_EDSACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0028_TBLRD_WORM_CONFIG_MEMORY" value="report"/>
+        <property key="warningmessagebreakoptions.W0026_CORE_UNIMPLEMENTED_MEMORYACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0027_CORE_UNIMPLEMENTED_EDSACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0028_TBLRD_WORM_CONFIG_MEMORY"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0029_TBLRD_DEVICE_ID" value="report"/>
-        <property key="warningmessagebreakoptions.W0030_CORE_UNIMPLEMENTED_MEMORY_ACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0031_BSLIM_INSUFFICIENT_BOOT_SEGMENT" value="report"/>
-        <property key="warningmessagebreakoptions.W0032_BSLIM_LIMITS_EXCEEDS_PROG_MEMORY" value="report"/>
-        <property key="warningmessagebreakoptions.W0033_CORE_UNPREDICTABLE_OPCODE" value="report"/>
-        <property key="warningmessagebreakoptions.W0034_CORE_UNALIGNED_MEMORY_ACCESS" value="report"/>
-        <property key="warningmessagebreakoptions.W0035_CORE_UNIMPLEMENTED_RAMACCESS_NOTRAP" value="report"/>
-        <property key="warningmessagebreakoptions.W0040_FPU_DIFF_CP10_CP11" value="report"/>
-        <property key="warningmessagebreakoptions.W0041_FPU_ACCESS_DENIED" value="report"/>
-        <property key="warningmessagebreakoptions.W0042_FPU_PRIVILEGED_ACCESS_ONLY" value="report"/>
-        <property key="warningmessagebreakoptions.W0043_FPU_CP_RESERVED_VALUE" value="report"/>
-        <property key="warningmessagebreakoptions.W0044_FPU_OUT_OF_RANGE" value="report"/>
-        <property key="warningmessagebreakoptions.W0051_INSTRUCTION_DIV_NOT_ENOUGH_REPEAT" value="report"/>
-        <property key="warningmessagebreakoptions.W0052_INSTRUCTION_DIV_TOO_MANY_REPEAT" value="report"/>
-        <property key="warningmessagebreakoptions.W0053_INVALID_INTCON_VS_FIELD_VALUE" value="report"/>
-        <property key="warningmessagebreakoptions.W0101_SIM_UPDATE_FAILED" value="report"/>
-        <property key="warningmessagebreakoptions.W0102_SIM_PERIPH_MISSING" value="report"/>
-        <property key="warningmessagebreakoptions.W0103_SIM_PERIPH_FAILED" value="report"/>
-        <property key="warningmessagebreakoptions.W0104_SIM_FAILED_TO_INIT_TOOL" value="report"/>
-        <property key="warningmessagebreakoptions.W0105_SIM_INVALID_FIELD" value="report"/>
-        <property key="warningmessagebreakoptions.W0106_SIM_PERIPH_PARTIAL_SUPPORT" value="report"/>
-        <property key="warningmessagebreakoptions.W0107_SIM_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0108_SIM_RESERVED_SETTING" value="report"/>
-        <property key="warningmessagebreakoptions.W0109_SIM_PERIPHERAL_IN_DEVELOPMENT" value="report"/>
-        <property key="warningmessagebreakoptions.W0110_SIM_UNEXPECTED_EVENT" value="report"/>
-        <property key="warningmessagebreakoptions.W0111_SIM_UNSUPPORTED_SELECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W0112_SIM_INVALID_OPERATION" value="report"/>
-        <property key="warningmessagebreakoptions.W0113_SIM_WRITE_TO_PROTECTED_SFR" value="report"/>
+        <property key="warningmessagebreakoptions.W0030_CORE_UNIMPLEMENTED_MEMORY_ACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0031_BSLIM_INSUFFICIENT_BOOT_SEGMENT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0032_BSLIM_LIMITS_EXCEEDS_PROG_MEMORY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0033_CORE_UNPREDICTABLE_OPCODE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0034_CORE_UNALIGNED_MEMORY_ACCESS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0035_CORE_UNIMPLEMENTED_RAMACCESS_NOTRAP"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0040_FPU_DIFF_CP10_CP11"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0041_FPU_ACCESS_DENIED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0042_FPU_PRIVILEGED_ACCESS_ONLY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0043_FPU_CP_RESERVED_VALUE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0044_FPU_OUT_OF_RANGE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0051_INSTRUCTION_DIV_NOT_ENOUGH_REPEAT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0052_INSTRUCTION_DIV_TOO_MANY_REPEAT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0053_INVALID_INTCON_VS_FIELD_VALUE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0101_SIM_UPDATE_FAILED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0102_SIM_PERIPH_MISSING"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0103_SIM_PERIPH_FAILED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0104_SIM_FAILED_TO_INIT_TOOL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0105_SIM_INVALID_FIELD"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0106_SIM_PERIPH_PARTIAL_SUPPORT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0107_SIM_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0108_SIM_RESERVED_SETTING"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0109_SIM_PERIPHERAL_IN_DEVELOPMENT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0110_SIM_UNEXPECTED_EVENT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0111_SIM_UNSUPPORTED_SELECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0112_SIM_INVALID_OPERATION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0113_SIM_WRITE_TO_PROTECTED_SFR"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0114_SIM_INVALID_KEY" value="report"/>
-        <property key="warningmessagebreakoptions.W0115_SIM_FAILED_TO_PARSE_DEVICE_FILE" value="report"/>
-        <property key="warningmessagebreakoptions.W0116_SIM_STACK_OVERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0117_SIM_STACK_UNDERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0118_SIM_INVALID_FIELD_VALUE" value="report"/>
-        <property key="warningmessagebreakoptions.W0119_SIM_SAMPLING_RATE_VIOLATION" value="report"/>
-        <property key="warningmessagebreakoptions.W0201_ADC_NO_STIMULUS_FILE" value="report"/>
+        <property key="warningmessagebreakoptions.W0115_SIM_FAILED_TO_PARSE_DEVICE_FILE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0116_SIM_STACK_OVERFLOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0117_SIM_STACK_UNDERFLOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0118_SIM_INVALID_FIELD_VALUE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0119_SIM_SAMPLING_RATE_VIOLATION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0201_ADC_NO_STIMULUS_FILE"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0202_ADC_GO_DONE_BIT" value="report"/>
-        <property key="warningmessagebreakoptions.W0203_ADC_MINIMUM_2_TAD" value="report"/>
-        <property key="warningmessagebreakoptions.W0204_ADC_TAD_TOO_SMALL" value="report"/>
-        <property key="warningmessagebreakoptions.W0205_ADC_UNEXPECTED_TRANSITION" value="report"/>
-        <property key="warningmessagebreakoptions.W0206_ADC_SAMP_TIME_TOO_SHORT" value="report"/>
-        <property key="warningmessagebreakoptions.W0207_ADC_NO_PINS_SCANNED" value="report"/>
-        <property key="warningmessagebreakoptions.W0208_ADC_UNSUPPORTED_CLOCK_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W0209_ADC_ANALOG_CHANNEL_DIGITAL" value="report"/>
-        <property key="warningmessagebreakoptions.W0210_ADC_ANALOG_CHANNEL_OUTPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0211_ADC_PIN_INVALID_CHANNEL" value="report"/>
-        <property key="warningmessagebreakoptions.W0212_ADC_BAND_GAP_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0213_ADC_RESERVED_SSRC" value="report"/>
-        <property key="warningmessagebreakoptions.W0214_ADC_POSITIVE_INPUT_DIGITAL" value="report"/>
-        <property key="warningmessagebreakoptions.W0215_ADC_POSITIVE_INPUT_OUTPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0216_ADC_NEGATIVE_INPUT_DIGITAL" value="report"/>
-        <property key="warningmessagebreakoptions.W0217_ADC_NEGATIVE_INPUT_OUTPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0218_ADC_REFERENCE_HIGH_DIGITAL" value="report"/>
-        <property key="warningmessagebreakoptions.W0219_ADC_REFERENCE_HIGH_OUTPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0220_ADC_REFERENCE_LOW_DIGITAL" value="report"/>
-        <property key="warningmessagebreakoptions.W0221_ADC_REFERENCE_LOW_OUTPUT" value="report"/>
+        <property key="warningmessagebreakoptions.W0203_ADC_MINIMUM_2_TAD"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0204_ADC_TAD_TOO_SMALL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0205_ADC_UNEXPECTED_TRANSITION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0206_ADC_SAMP_TIME_TOO_SHORT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0207_ADC_NO_PINS_SCANNED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0208_ADC_UNSUPPORTED_CLOCK_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0209_ADC_ANALOG_CHANNEL_DIGITAL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0210_ADC_ANALOG_CHANNEL_OUTPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0211_ADC_PIN_INVALID_CHANNEL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0212_ADC_BAND_GAP_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0213_ADC_RESERVED_SSRC"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0214_ADC_POSITIVE_INPUT_DIGITAL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0215_ADC_POSITIVE_INPUT_OUTPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0216_ADC_NEGATIVE_INPUT_DIGITAL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0217_ADC_NEGATIVE_INPUT_OUTPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0218_ADC_REFERENCE_HIGH_DIGITAL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0219_ADC_REFERENCE_HIGH_OUTPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0220_ADC_REFERENCE_LOW_DIGITAL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0221_ADC_REFERENCE_LOW_OUTPUT"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0222_ADC_OVERFLOW" value="report"/>
         <property key="warningmessagebreakoptions.W0223_ADC_UNDERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0224_ADC_CTMU_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0225_ADC_INVALID_CH0S" value="report"/>
-        <property key="warningmessagebreakoptions.W0226_ADC_VBAT_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0227_ADC_INVALID_ADCS" value="report"/>
-        <property key="warningmessagebreakoptions.W0228_ADC_INVALID_ADCS" value="report"/>
-        <property key="warningmessagebreakoptions.W0229_ADC_INVALID_ADCS" value="report"/>
-        <property key="warningmessagebreakoptions.W0230_ADC_TRIGSEL_NOT_SUPPORTED" value="report"/>
+        <property key="warningmessagebreakoptions.W0224_ADC_CTMU_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0225_ADC_INVALID_CH0S"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0226_ADC_VBAT_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0227_ADC_INVALID_ADCS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0228_ADC_INVALID_ADCS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0229_ADC_INVALID_ADCS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0230_ADC_TRIGSEL_NOT_SUPPORTED"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0231_ADC_NOT_WARMED" value="report"/>
-        <property key="warningmessagebreakoptions.W0232_ADC_CALIBRATION_ABORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0233_ADC_CORE_POWERED_EARLY" value="report"/>
-        <property key="warningmessagebreakoptions.W0234_ADC_ALREADY_CALIBRATING" value="report"/>
-        <property key="warningmessagebreakoptions.W0235_ADC_CAL_TYPE_CHANGED" value="report"/>
-        <property key="warningmessagebreakoptions.W0236_ADC_CAL_INVALIDATED" value="report"/>
-        <property key="warningmessagebreakoptions.W0237_ADC_UNKNOWN_DATASHEET" value="report"/>
-        <property key="warningmessagebreakoptions.W0238_ADC_INVALID_SFR_FIELD_VALUE" value="report"/>
-        <property key="warningmessagebreakoptions.W0239_ADC_UNSUPPORTED_INPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0240_ADC_NOT_CALIBRATED" value="report"/>
-        <property key="warningmessagebreakoptions.W0241_ADC_FRACTIONAL_NOT_ALLOWED" value="report"/>
-        <property key="warningmessagebreakoptions.W0242_ADC_BG_INT_BEFORE_PWR" value="report"/>
+        <property key="warningmessagebreakoptions.W0232_ADC_CALIBRATION_ABORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0233_ADC_CORE_POWERED_EARLY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0234_ADC_ALREADY_CALIBRATING"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0235_ADC_CAL_TYPE_CHANGED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0236_ADC_CAL_INVALIDATED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0237_ADC_UNKNOWN_DATASHEET"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0238_ADC_INVALID_SFR_FIELD_VALUE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0239_ADC_UNSUPPORTED_INPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0240_ADC_NOT_CALIBRATED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0241_ADC_FRACTIONAL_NOT_ALLOWED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0242_ADC_BG_INT_BEFORE_PWR"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0243_ADC_INVALID_TAD" value="report"/>
-        <property key="warningmessagebreakoptions.W0244_ADC_CONVERSION_ABORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0245_ADC_BUFREGEN_NOT_ALLOWED" value="report"/>
-        <property key="warningmessagebreakoptions.W0246_ADC_ACCUMULATION_BAD_RESSEL" value="report"/>
-        <property key="warningmessagebreakoptions.W0247_ADC_CONVERSION_BAD_RESSEL" value="report"/>
-        <property key="warningmessagebreakoptions.W0400_PWM_PWM_FASTER_THAN_FOSC" value="report"/>
-        <property key="warningmessagebreakoptions.W0600_WDT_2ND_WDT_MR_WRITE" value="report"/>
+        <property key="warningmessagebreakoptions.W0244_ADC_CONVERSION_ABORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0245_ADC_BUFREGEN_NOT_ALLOWED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0246_ADC_ACCUMULATION_BAD_RESSEL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0247_ADC_CONVERSION_BAD_RESSEL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0400_PWM_PWM_FASTER_THAN_FOSC"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0600_WDT_2ND_WDT_MR_WRITE"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W0601_WDT_EXPIRED" value="report"/>
-        <property key="warningmessagebreakoptions.W0601_WDT_RESET_OUTSIDE_WINDOW" value="report"/>
-        <property key="warningmessagebreakoptions.W0700_CLC_GENERAL_WARNING" value="report"/>
-        <property key="warningmessagebreakoptions.W0701_CLC_CLCOUT_AS_INPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W0702_CLC_CIRCULAR_LOOP" value="report"/>
-        <property key="warningmessagebreakoptions.W0800_ACC_INPUT_INVALID_CONFIG" value="report"/>
-        <property key="warningmessagebreakoptions.W0801_ACC_INPUT_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W0802_ACC_INVERTED_WINDOW_LIMITS" value="report"/>
-        <property key="warningmessagebreakoptions.W0803_ACC_MISMATCHED_POS_INPUTS" value="report"/>
-        <property key="warningmessagebreakoptions.W0804_ACC_WINDOW_COMP_DISABLED" value="report"/>
-        <property key="warningmessagebreakoptions.W0805_ACC_WINDOW_COMPS_MODES" value="report"/>
-        <property key="warningmessagebreakoptions.W0806_ACC_FEATURE_NOT_SUPPORTED" value="report"/>
-        <property key="warningmessagebreakoptions.W10001_RESERVED_IRQ_HANDLER_INVOKED" value="report"/>
-        <property key="warningmessagebreakoptions.W10002_UNSUPPORTED_CLK_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W10101_UNSUPPORTED_CHANNEL_MODE" value="report"/>
-        <property key="warningmessagebreakoptions.W10102_UNSUPPORTED_CLK_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W10103_UNSUPPORTED_RECEIVER_FILTER" value="report"/>
-        <property key="warningmessagebreakoptions.W10301_NO_PORT_PINS_FOUND" value="report"/>
-        <property key="warningmessagebreakoptions.W10500_UNSUPPORTED_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W1201_DATAFLASH_MEM_OUTSIDE_RANGE" value="report"/>
-        <property key="warningmessagebreakoptions.W1202_DATAFLASH_ERASE_WHILE_LOCKED" value="report"/>
-        <property key="warningmessagebreakoptions.W1203_DATAFLASH_WRITE_WHILE_LOCKED" value="report"/>
-        <property key="warningmessagebreakoptions.W1401_DMA_PERIPH_NOT_AVAIL" value="report"/>
+        <property key="warningmessagebreakoptions.W0601_WDT_RESET_OUTSIDE_WINDOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0700_CLC_GENERAL_WARNING"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0701_CLC_CLCOUT_AS_INPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0702_CLC_CIRCULAR_LOOP"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0800_ACC_INPUT_INVALID_CONFIG"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0801_ACC_INPUT_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0802_ACC_INVERTED_WINDOW_LIMITS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0803_ACC_MISMATCHED_POS_INPUTS"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0804_ACC_WINDOW_COMP_DISABLED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0805_ACC_WINDOW_COMPS_MODES"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W0806_ACC_FEATURE_NOT_SUPPORTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10001_RESERVED_IRQ_HANDLER_INVOKED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10002_UNSUPPORTED_CLK_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10101_UNSUPPORTED_CHANNEL_MODE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10102_UNSUPPORTED_CLK_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10103_UNSUPPORTED_RECEIVER_FILTER"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10301_NO_PORT_PINS_FOUND"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W10500_UNSUPPORTED_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1201_DATAFLASH_MEM_OUTSIDE_RANGE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1202_DATAFLASH_ERASE_WHILE_LOCKED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1203_DATAFLASH_WRITE_WHILE_LOCKED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1401_DMA_PERIPH_NOT_AVAIL"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W1402_DMA_INVALID_IRQ" value="report"/>
         <property key="warningmessagebreakoptions.W1403_DMA_INVALID_SFR" value="report"/>
-        <property key="warningmessagebreakoptions.W1404_DMA_INVALID_DMA_ADDR" value="report"/>
-        <property key="warningmessagebreakoptions.W1405_DMA_IRQ_DIR_MISMATCH" value="report"/>
+        <property key="warningmessagebreakoptions.W1404_DMA_INVALID_DMA_ADDR"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1405_DMA_IRQ_DIR_MISMATCH"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W1600_PPS_INVALID_MAP" value="report"/>
-        <property key="warningmessagebreakoptions.W1601_PPS_INVALID_PIN_DESCRIPTION" value="report"/>
-        <property key="warningmessagebreakoptions.W1800_PWM_TIMER_SELECTION_NOT_AVIALABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W1801_PWM_TIMER_SELECTION_BAD_CLOCK_INPUT" value="report"/>
-        <property key="warningmessagebreakoptions.W1802_PWM_TIMER_MISSING_PERSCALER_INFO" value="report"/>
-        <property key="warningmessagebreakoptions.W2001_INPUTCAPTURE_TMR3_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W2002_INPUTCAPTURE_CAPTURE_EMPTY" value="report"/>
-        <property key="warningmessagebreakoptions.W2003_INPUTCAPTURE_SYNCSEL_NOT_AVIALABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W2004_INPUTCAPTURE_BAD_SYNC_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W2501_OUTPUTCOMPARE_SYNCSEL_NOT_AVIALABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W2502_OUTPUTCOMPARE_BAD_SYNC_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W2503_OUTPUTCOMPARE_BAD_TRIGGER_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W2700_MPU_ILLEGAL_DREGION" value="report"/>
-        <property key="warningmessagebreakoptions.W2701_MPU_INVALID_REGION" value="report"/>
-        <property key="warningmessagebreakoptions.W3000_LPM_READ_PROTECTION_SECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W3010_SPM_WRITE_PROTECTION_SECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W6001_RTT_FORBIDDEN_RTPRES" value="report"/>
-        <property key="warningmessagebreakoptions.W6002_RTT_BAD_WRITING_ALMV" value="report"/>
-        <property key="warningmessagebreakoptions.W6003_RTT_BAD_WRITING_RTPRES" value="report"/>
-        <property key="warningmessagebreakoptions.W7001_SMT_CLK_SELECTION_NOT_SUPPORT" value="report"/>
-        <property key="warningmessagebreakoptions.W7002_SMT_SIG_SELECTION_NOT_SUPPORT" value="report"/>
-        <property key="warningmessagebreakoptions.W7003_SMT_WIN_SELECTION_NOT_SUPPORT" value="report"/>
-        <property key="warningmessagebreakoptions.W8001_OSC_INVALID_CLOCK_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W8002_OSC_RESERVED_FEXTOSC" value="report"/>
-        <property key="warningmessagebreakoptions.W9001_TMR_GATE_AND_EXTCLOCK_ENABLED" value="report"/>
-        <property key="warningmessagebreakoptions.W9002_TMR_NO_PIN_AVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9003_TMR_INVALID_CLOCK_SOURCE" value="report"/>
-        <property key="warningmessagebreakoptions.W9201_UART_TX_OVERFLOW" value="report"/>
-        <property key="warningmessagebreakoptions.W9202_UART_TX_CAPTUREFILE" value="report"/>
-        <property key="warningmessagebreakoptions.W9203_UART_TX_INVALIDINTERRUPTMODE" value="report"/>
-        <property key="warningmessagebreakoptions.W9204_UART_RX_EMPTY_QUEUE" value="report"/>
+        <property key="warningmessagebreakoptions.W1601_PPS_INVALID_PIN_DESCRIPTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1800_PWM_TIMER_SELECTION_NOT_AVIALABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1801_PWM_TIMER_SELECTION_BAD_CLOCK_INPUT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W1802_PWM_TIMER_MISSING_PERSCALER_INFO"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2001_INPUTCAPTURE_TMR3_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2002_INPUTCAPTURE_CAPTURE_EMPTY"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2003_INPUTCAPTURE_SYNCSEL_NOT_AVIALABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2004_INPUTCAPTURE_BAD_SYNC_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2501_OUTPUTCOMPARE_SYNCSEL_NOT_AVIALABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2502_OUTPUTCOMPARE_BAD_SYNC_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2503_OUTPUTCOMPARE_BAD_TRIGGER_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2700_MPU_ILLEGAL_DREGION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W2701_MPU_INVALID_REGION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W3000_LPM_READ_PROTECTION_SECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W3010_SPM_WRITE_PROTECTION_SECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W6001_RTT_FORBIDDEN_RTPRES"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W6002_RTT_BAD_WRITING_ALMV"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W6003_RTT_BAD_WRITING_RTPRES"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W7001_SMT_CLK_SELECTION_NOT_SUPPORT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W7002_SMT_SIG_SELECTION_NOT_SUPPORT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W7003_SMT_WIN_SELECTION_NOT_SUPPORT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W8001_OSC_INVALID_CLOCK_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W8002_OSC_RESERVED_FEXTOSC"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9001_TMR_GATE_AND_EXTCLOCK_ENABLED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9002_TMR_NO_PIN_AVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9003_TMR_INVALID_CLOCK_SOURCE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9201_UART_TX_OVERFLOW"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9202_UART_TX_CAPTUREFILE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9203_UART_TX_INVALIDINTERRUPTMODE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9204_UART_RX_EMPTY_QUEUE"
+                  value="report"/>
         <property key="warningmessagebreakoptions.W9205_UART_TX_BADFILE" value="report"/>
-        <property key="warningmessagebreakoptions.W9206_UART_RESERVED_MODE" value="report"/>
-        <property key="warningmessagebreakoptions.W9207_UART_UNABLETOCLOSE_FILE" value="report"/>
-        <property key="warningmessagebreakoptions.W9401_CVREF_INVALIDSOURCESELECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W9402_CVREF_INPUT_OUTPUTPINCONFLICT" value="report"/>
-        <property key="warningmessagebreakoptions.W9601_COMP_FVR_SOURCE_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9602_COMP_DAC_SOURCE_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9603_COMP_CVREF_SOURCE_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9604_COMP_SLOPE_SOURCE_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9605_COMP_PRG_SOURCE_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9607_COMP_DGTL_FLTR_OPTION_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9609_COMP_DGTL_FLTR_CLK_UNAVAILABLE" value="report"/>
-        <property key="warningmessagebreakoptions.W9801_FVR_INVALID_MODE_SELECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W9801_SCL_BAD_SUBTYPE_INDICATION" value="report"/>
-        <property key="warningmessagebreakoptions.W9802_SCL_FILE_NOT_FOUND" value="report"/>
-        <property key="warningmessagebreakoptions.W9803_SCL_FAILED_TO_READ_FILE" value="report"/>
-        <property key="warningmessagebreakoptions.W9804_SCL_UNRECOGNIZED_LABEL" value="report"/>
-        <property key="warningmessagebreakoptions.W9805_SCL_UNRECOGNIZED_VAR" value="report"/>
-        <property key="warningmessagebreakoptions.W9901_RTSP_INVALID_OPERATION_SELECTION" value="report"/>
-        <property key="warningmessagebreakoptions.W9902_RTSP_FLASH_PROGRAM_WRITE_PROTECTED" value="report"/>
-        <property key="warningmessagebreakoptions.displaywarningmessagesoption" value=""/>
+        <property key="warningmessagebreakoptions.W9206_UART_RESERVED_MODE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9207_UART_UNABLETOCLOSE_FILE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9401_CVREF_INVALIDSOURCESELECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9402_CVREF_INPUT_OUTPUTPINCONFLICT"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9601_COMP_FVR_SOURCE_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9602_COMP_DAC_SOURCE_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9603_COMP_CVREF_SOURCE_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9604_COMP_SLOPE_SOURCE_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9605_COMP_PRG_SOURCE_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9607_COMP_DGTL_FLTR_OPTION_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9609_COMP_DGTL_FLTR_CLK_UNAVAILABLE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9801_FVR_INVALID_MODE_SELECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9801_SCL_BAD_SUBTYPE_INDICATION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9802_SCL_FILE_NOT_FOUND"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9803_SCL_FAILED_TO_READ_FILE"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9804_SCL_UNRECOGNIZED_LABEL"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9805_SCL_UNRECOGNIZED_VAR"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9901_RTSP_INVALID_OPERATION_SELECTION"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.W9902_RTSP_FLASH_PROGRAM_WRITE_PROTECTED"
+                  value="report"/>
+        <property key="warningmessagebreakoptions.displaywarningmessagesoption"
+                  value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
       <Tool>
@@ -3234,8 +3796,10 @@
         <property key="communication.interface" value="swd"/>
         <property key="communication.speed" value="2.000"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.path" value="Press to browse for a specific firmware version"/>
-        <property key="firmware.toolpack" value="Press to select which tool pack to use"/>
+        <property key="firmware.path"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="firmware.toolpack"
+                  value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
         <property key="freeze.timers" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -3247,22 +3811,26 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-3ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
-        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value=""/>
       </nEdbgTool>
     </conf>

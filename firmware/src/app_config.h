@@ -38,10 +38,17 @@
 // *****************************************************************************
 
 // Set to true to have firmware dump data to uart in ascii format
-#define DATA_LOGGER_BUILD       true
+#define DATA_LOGGER_BUILD       false
 
 // Set to true to have firmware dump data to uart in form suitable for MPLAB DV plugin
 #define DATA_VISUALIZER_BUILD   false
+
+#define SENSIML_SIMPLE_STREAM_BUILD 1
+
+#if SENSIML_SIMPLE_STREAM_BUILD
+#define SNSR_SAMPLES_PER_PACKET 6
+
+#endif
 
 #define MPDV_START_OF_FRAME     0xA5U   // Frame header byte for MPLAB DV
 
@@ -105,7 +112,7 @@
 
 #if (DATA_LOGGER_BUILD && DATA_VISUALIZER_BUILD)
     #error "Only one of DATA_LOGGER_BUILD or DATA_VISUALIZER_BUILD may be set"
-#elif !(DATA_LOGGER_BUILD || DATA_VISUALIZER_BUILD)
+#elif (!(DATA_LOGGER_BUILD || DATA_VISUALIZER_BUILD || SENSIML_SIMPLE_STREAM_BUILD))
     #error "Neither one of DATA_LOGGER_BUILD or DATA_VISUALIZER_BUILD has been set"
 #endif
 

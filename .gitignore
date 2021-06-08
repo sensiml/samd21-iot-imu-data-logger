@@ -1,0 +1,10 @@
+/firmware/samd21_iot_imu.X/build/
+/firmware/samd21_iot_imu.X/dist/
+/firmware/samd21_iot_imu.X/.generated_files/
+**/Makefile-genesis.properties
+**/Makefile-impl.mk
+**/Makefile-local*
+**/Makefile-SAMD21*
+**/Makefile-variables.mk
+**/Package-SAMD21_*
+**/nbproject/private/

@@ -30,6 +30,11 @@
 #include "sensor.h"
 #include "app_config.h"
 
+#if SENSIML_SIMPLE_STREAM_BUILD
+#include "ssi_comms.h"
+static ssi_io_funcs_t ssi_io_s;
+#endif //SENSIML_SIMPLE_STREAM_BUILD
+
 #define SYSTICK_FREQ_IN_MHZ 48 // !NB! This must be changed if the processor clock changes
 
 // *****************************************************************************
@@ -43,10 +48,69 @@ static volatile uint32_t tickcounter = 0;
 static struct sensor_device_t sensor;
 static struct sensor_buffer_t snsr_buffer;
 
+#if SENSIML_SIMPLE_STREAM_BUILD
+static SNSR_DATA_TYPE packet_data_buffer[SNSR_NUM_AXES * SNSR_SAMPLES_PER_PACKET];
+#define PACKET_BUFFER_BYTE_LEN (SNSR_NUM_AXES * SNSR_SAMPLES_PER_PACKET * sizeof(SNSR_DATA_TYPE))
+static int num_packets = 0;
+static char json_config_str[512];
+
+static void connect_reconnect()
+{
+    uint32_t time = read_timer_ms();
+
+    printf("%s\r\n", json_config_str);
+    while(!ssi_io_s.connected) {
+        if(SERCOM5_USART_ReadCountGet() >= CONNECT_CHARS)
+        {
+            ssi_try_connect();
+        }
+        if ((read_timer_ms() - time) >= 1000) {
+            time = read_timer_ms();
+            printf("%s\r\n", json_config_str);
+        }
+    }
+    buffer_reset(&snsr_buffer);
+}
+
+static void build_json_config(void)
+{
+    int written=0;
+    int snsr_index = 0;
+    written += sprintf(json_config_str, "{\"version\":%d, \"sample_rate\":%d,"
+                        "\"samples_per_packet\":%d,"
+                        "\"column_location\":{"
+                        , SSI_JSON_CONFIG_VERSION, SNSR_SAMPLE_RATE, SNSR_SAMPLES_PER_PACKET);
+    #if SNSR_USE_ACCEL_X
+    written += sprintf(json_config_str+written, "\"AccelerometerX\":%d,", snsr_index++);
+    #endif
+    #if SNSR_USE_ACCEL_Y
+    written += sprintf(json_config_str+written, "\"AccelerometerY\":%d,", snsr_index++);
+    #endif
+    #if SNSR_USE_ACCEL_Z
+    written += sprintf(json_config_str+written, "\"AccelerometerZ\":%d,", snsr_index++);
+    #endif
+    #if SNSR_USE_GYRO_X
+    written += sprintf(json_config_str+written, "\"GyroscopeX\":%d,", snsr_index++);
+    #endif
+    #if SNSR_USE_GYRO_Y
+    written += sprintf(json_config_str+written, "\"GyroscopeY\":%d,", snsr_index++);
+    #endif
+    #if SNSR_USE_GYRO_Z
+    written += sprintf(json_config_str+written, "\"GyroscopeZ\":%d", snsr_index++);
+    #endif
+    if(json_config_str[written-1] == ',')
+    {
+        written--;
+    }
+    sprintf(json_config_str+written, "}}");
+}
+
+#endif //SENSIML_SIMPLE_STREAM_BUILD
+
 void SYSTICK_Callback(uintptr_t context) {
     static int mstick = 0;
     int tickrate = *((int *) context);
-    
+
     ++tickcounter;
     if (tickrate == 0) {
         mstick = 0;
@@ -83,47 +147,47 @@ void sleep_us(uint32_t us) {
 // For handling read of the sensor data
 void SNSR_ISR_HANDLER(uintptr_t context) {
     struct sensor_device_t *sensor = (struct sensor_device_t *) context;
-    
+
     /* Check if any errors we've flagged have been acknowledged */
     if (sensor->status != SNSR_STATUS_OK) {
         return;
     }
-    
+
     sensor->status = sensor_read(sensor, &snsr_buffer);
 }
 
 int main ( void )
 {
     int tickrate = 0;
-    
+
     /* Initialize all modules */
     SYS_Initialize ( NULL );
-    
+
     /* Register and start the LED ticker */
     SYSTICK_TimerCallbackSet(SYSTICK_Callback, (uintptr_t) &tickrate);
     SYSTICK_TimerStart();
-    
+
     /* Activate External Interrupt Controller for sensor capture */
     EIC_CallbackRegister(MIKRO_EIC_PIN, SNSR_ISR_HANDLER, (uintptr_t) &sensor);
     EIC_InterruptEnable(MIKRO_EIC_PIN);
-       
+
     /* Initialize our data buffer */
     buffer_init(&snsr_buffer);
-    
+
     printf("\r\n");
-    
+
     while (1)
-    {    
+    {
         if (sensor_init(&sensor) != SNSR_STATUS_OK) {
             printf("sensor init result = %d\r\n", sensor.status);
             break;
         }
-        
+
         if (sensor_set_config(&sensor) != SNSR_STATUS_OK) {
             printf("sensor configuration result = %d\r\n", sensor.status);
             break;
         }
-        
+
         printf("sensor type is %s\r\n", SNSR_NAME);
         printf("sensor sample rate set at %d%s\r\n", SNSR_SAMPLE_RATE, SNSR_SAMPLE_RATE_UNIT_STR);
 #if SNSR_USE_ACCEL
@@ -136,47 +200,79 @@ int main ( void )
 #else
         printf("gyrometer disabled\r\n");
 #endif
+
+#if SENSIML_SIMPLE_STREAM_BUILD
+        ssi_io_s.ssi_read = SERCOM5_USART_Read;
+        ssi_io_s.ssi_write = SERCOM5_USART_Write;
+        ssi_io_s.connected = false;
+        ssi_init(&ssi_io_s);
+        build_json_config();
+
+        connect_reconnect();
+
+#endif //SENSIML_SIMPLE_STREAM_BUILD
         buffer_reset(&snsr_buffer);
         break;
     }
-    
+
     while (1)
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */
         SYS_Tasks ( );
-        
+
         if (sensor.status != SNSR_STATUS_OK) {
             printf("Got a bad sensor status: %d\r\n", sensor.status);
             break;
         }
         else if (snsr_buffer.overrun == true) {
             printf("\r\n\r\n\r\nOverrun!\r\n\r\n\r\n");
-            
+
             // Light the LEDs to indicate overflow
             tickrate = 0;
             LED_ALL_Off();
             LED_YELLOW_On(); LED_RED_On();  // Indicate OVERFLOW
             sleep_ms(5000U);
             LED_ALL_Off(); // Clear OVERFLOW
-            
-            buffer_reset(&snsr_buffer); 
+
+            buffer_reset(&snsr_buffer);
             continue;
-        }     
+        }
         else {
             // Feed temp buffer
             buffer_data_t *ptr;
             int rdcnt = buffer_get_read_buffer(&snsr_buffer, &ptr);
 
             while ( --rdcnt >= 0 ) {
-#if DATA_VISUALIZER_BUILD
-                uint8_t headerbyte = MPDV_START_OF_FRAME;
+#if SENSIML_SIMPLE_STREAM_BUILD
+                for(int i = 0; i < SNSR_NUM_AXES; i++)
+                {
+                    packet_data_buffer[i+(num_packets * SNSR_NUM_AXES)]=ptr[i];
+                }
+                num_packets++;
+                if(num_packets == SNSR_SAMPLES_PER_PACKET)
+                {
+                    if(ssi_io_s.connected)
+                    {
+#if SSI_JSON_CONFIG_VERSION==2
+                    ssiv2_publish_sensor_data(0, (uint8_t*) packet_data_buffer, PACKET_BUFFER_BYTE_LEN);
+#elif SSI_JSON_CONFIG_VERSION==1
+                    ssiv1_publish_sensor_data((uint8_t*) packet_data_buffer, PACKET_BUFFER_BYTE_LEN);
+#endif
+                    num_packets = 0;
+                    }
+                }
+               
                 
+                
+#elif DATA_VISUALIZER_BUILD
+                uint8_t headerbyte = MPDV_START_OF_FRAME;
+
                 SERCOM5_USART_Write(&headerbyte, 1);
                 while (SERCOM5_USART_WriteIsBusy()) { };
 
                 SERCOM5_USART_Write(ptr, SNSR_NUM_AXES*sizeof(buffer_data_t));
                 while (SERCOM5_USART_WriteIsBusy()) { };
-                
+
                 headerbyte = ~headerbyte;
                 SERCOM5_USART_Write(&headerbyte, 1);
                 while (SERCOM5_USART_WriteIsBusy()) { };
@@ -191,13 +287,12 @@ int main ( void )
                 ptr += SNSR_NUM_AXES;
             }
         }
-        
+
     }
-        
     tickrate = 0;
     LED_GREEN_Off();
     LED_RED_On();
-    
+
     return ( EXIT_FAILURE );
 }
 

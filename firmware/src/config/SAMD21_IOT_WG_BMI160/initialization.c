@@ -120,9 +120,6 @@
 static void STDIO_BufferModeSet(void)
 {
 
-    /* Make stdin unbuffered */
-    setbuf(stdin, NULL);
-
     /* Make stdout unbuffered */
     setbuf(stdout, NULL);
 }
