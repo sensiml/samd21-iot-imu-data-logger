@@ -71,6 +71,10 @@ void SYSTICK_Callback(uintptr_t context) {
     int tickrate = *((int *) context);
 
     ++tickcounter;
+    if(tickcounter % 1000 == 0 && !ssi_connected())
+    {
+        send_json_config();
+    }
     if (tickrate == 0) {
         mstick = 0;
     }
@@ -121,7 +125,7 @@ int main ( void )
 
     /* Initialize all modules */
     SYS_Initialize ( NULL );
-
+    
     /* Register and start the LED ticker */
     SYSTICK_TimerCallbackSet(SYSTICK_Callback, (uintptr_t) &tickrate);
     SYSTICK_TimerStart();
@@ -134,18 +138,22 @@ int main ( void )
     buffer_init(&snsr_buffer);
 
 #if SENSIML_SIMPLE_STREAM_BUILD
+    SERCOM5_USART_ReceiverEnable();
     ssi_init(SERCOM5_USART_Read, SERCOM5_USART_Write);
-    send_json_config();
 
     while(true)
     {
-        ssi_try_connect();
-        if(ssi_connected())
+        if((SERCOM5_REGS->USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_RXC_Msk) == 1U)
         {
-            break;
+            ssi_try_connect();
+            if(ssi_connected())
+            {
+                break;
+            }
         }
         sleep_ms(1000);
-        send_json_config();
+        
+        
     }
 #endif //SENSIML_SIMPLE_STREAM_BUILD
 
