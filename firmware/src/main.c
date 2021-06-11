@@ -203,7 +203,11 @@ int main ( void )
                 num_packets++;
                 if(num_packets == SNSR_SAMPLES_PER_PACKET)
                 {
+                    #if SSI_JSON_CONFIG_VERSION==2
                     ssiv2_publish_sensor_data(0, (uint8_t*) packet_data_buffer, PACKET_BUFFER_BYTE_LEN);
+                    #elif SSI_JSON_CONFIG_VERSION==1
+                    ssiv1_publish_sensor_data((uint8_t*) packet_data_buffer, PACKET_BUFFER_BYTE_LEN);
+                    #endif
                     num_packets = 0;
                 }
 #elif DATA_VISUALIZER_BUILD

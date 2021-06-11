@@ -42,6 +42,7 @@ typedef struct
 void ssi_init(bool (*read)(void*, const size_t),  bool (*write)(void*, const size_t));
 bool ssi_connected(void);
 void ssi_try_connect(void);
+
 void ssi_seqnum_init(uint8_t channel);
 void ssi_seqnum_reset(uint8_t channel);
 uint32_t ssi_seqnum_update(uint8_t channel);
@@ -49,6 +50,6 @@ uint32_t ssi_seqnum_get(uint8_t channel);
 uint8_t ssi_payload_checksum_get(uint8_t *p_data, uint16_t len);
 
 void ssiv2_publish_sensor_data(uint8_t channel, uint8_t* p_source, int ilen);
-
+void ssiv1_publish_sensor_data(uint8_t* buffer, int size);
 #endif //SENSIML_SIMPLE_STREAM_BUILD
 #endif /* SSI_COMMS_H_ */

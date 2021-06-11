@@ -135,4 +135,17 @@ void ssiv2_publish_sensor_data(uint8_t channel, uint8_t* buffer, int size)
     ssi_interface.ssi_write(&crc8, 1);
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-function"
+
+void ssiv1_publish_sensor_data(uint8_t* buffer, int size)
+{
+    if(ssi_interface.initialized == false)
+    {
+        return;
+    }
+    ssi_interface.ssi_write(buffer, size);
+}
+#pragma GCC diagnostic pop
+
 #endif //SENSIML_SIMPLE_STREAM_BUILD

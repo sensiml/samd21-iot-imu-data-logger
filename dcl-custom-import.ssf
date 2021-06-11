@@ -1,0 +1,132 @@
+{
+    "uuid": "5d53948a-720f-446f-b2c8-4604a963ad45",
+    "name": "SAMD21 ML Kit Custom",
+    "collection_methods": [
+        {
+            "name": "live",
+            "display_name": "Live Stream Capture",
+            "storage_path": null,
+            "is_default": true
+        }
+    ],
+    "device_connections": [
+        {
+            "name": "serial_simple_stream",
+            "display_name": "Data Stream Serial Port",
+            "value": 1,
+            "is_default": true,
+            "serial_port_configuration": {
+                "com_port": null,
+                "baud": 921600,
+                "stop_bits": 1,
+                "parity": 0,
+                "handshake": 0,
+                "max_live_sample_rate": 611
+            }
+        },
+        {
+            "name": "wifi_simple",
+            "display_name": "Simple Stream over WiFi",
+            "value": 2,
+            "is_default": true,
+            "wifi_configuration": {
+                "use_mqttsn": false,
+                "use_external_broker": false,
+                "external_broker_address": "",
+                "broker_port": 1885,
+                "device_ip_address": null,
+                "device_port": 5555,
+                "max_live_sample_rate": 1000000
+            }
+        }
+    ],
+    "capture_sources": [
+        {
+            "max_throughput": 0,
+            "name": "Motion (BMI160)",
+            "part": "BMI160",
+            "sample_rates": [
+                1600,
+                800,
+                400,
+                200,
+                100,
+                50,
+                25
+            ],
+            "sensors": [
+                {
+                    "column_count": 3,
+                    "column_suffixes": [
+                        "X",
+                        "Y",
+                        "Z"
+                    ],
+                    "type": "Accelerometer",
+                    "parameters": [],
+                    "sensor_id": 1,
+                    "can_live_stream": false
+                },
+                {
+                    "column_count": 3,
+                    "column_suffixes": [
+                        "X",
+                        "Y",
+                        "Z"
+                    ],
+                    "type": "Gyroscope",
+                    "parameters": [],
+                    "sensor_id": 2,
+                    "can_live_stream": false
+                }
+            ],
+            "sensor_combinations": null
+        },
+        {
+            "max_throughput": 0,
+            "name": "Motion (ICM-42688-P)",
+            "part": "ICM-42688-P",
+            "sample_rates": [
+                16000,
+                8000,
+                4000,
+                1000,
+                1000,
+                500,
+                200,
+                100,
+                50,
+                25,
+                12
+            ],
+            "sensors": [
+                {
+                    "column_count": 3,
+                    "column_suffixes": [
+                        "X",
+                        "Y",
+                        "Z"
+                    ],
+                    "type": "Accelerometer",
+                    "parameters": [],
+                    "sensor_id": 1,
+                    "can_live_stream": false
+                },
+                {
+                    "column_count": 3,
+                    "column_suffixes": [
+                        "X",
+                        "Y",
+                        "Z"
+                    ],
+                    "type": "Gyroscope",
+                    "parameters": [],
+                    "sensor_id": 2,
+                    "can_live_stream": false
+                }
+            ],
+            "sensor_combinations": null
+        },
+    ],
+    "is_little_endian": true
+}
