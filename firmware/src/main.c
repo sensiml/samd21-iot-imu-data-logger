@@ -140,15 +140,11 @@ int main ( void )
 #if SENSIML_SIMPLE_STREAM_BUILD
     ssi_init(SERCOM5_USART_Read, SERCOM5_USART_Write);
     SYSTICK_TimerStart();
-    while(1)
-    {
-            ssi_try_connect();
-            if(ssi_connected())
+    
+    ssi_try_connect();
+    while(!ssi_connected())
             {
-                SYSTICK_TimerStop();
-                break;
-            }
-    }
+        }
 #endif //SENSIML_SIMPLE_STREAM_BUILD
 
 
