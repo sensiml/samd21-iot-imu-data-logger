@@ -138,22 +138,16 @@ int main ( void )
     buffer_init(&snsr_buffer);
 
 #if SENSIML_SIMPLE_STREAM_BUILD
-    SERCOM5_USART_ReceiverEnable();
     ssi_init(SERCOM5_USART_Read, SERCOM5_USART_Write);
-
-    while(true)
+    SYSTICK_TimerStart();
+    while(1)
     {
-        if((SERCOM5_REGS->USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_RXC_Msk) == 1U)
-        {
             ssi_try_connect();
             if(ssi_connected())
             {
+                SYSTICK_TimerStop();
                 break;
             }
-        }
-        sleep_ms(1000);
-
-
     }
 #endif //SENSIML_SIMPLE_STREAM_BUILD
 

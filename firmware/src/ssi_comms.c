@@ -52,14 +52,14 @@ void ssi_try_connect(void)
 {
     chars_read = 0;
     memset(connection_buf, 0,DISCONNECT_CHARS );
-    while(chars_read < CONNECT_CHARS)
+    if(SERCOM5_USART_Read(&connection_buf[chars_read], CONNECT_CHARS))
     {
-        SERCOM5_USART_Read(&connection_buf[chars_read], 1);
-        chars_read++;
-    }
-    if(strncmp(connection_buf, CONNECT_STRING, CONNECT_CHARS) == 0)
-    {
-         ssi_interface.connected = true;
+        
+   
+        if(strncmp(connection_buf, CONNECT_STRING, CONNECT_CHARS) == 0)
+        {
+            ssi_interface.connected = true;
+        }
     }
 }
 
