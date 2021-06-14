@@ -42,6 +42,7 @@ typedef struct
 void ssi_init(bool (*read)(void*, const size_t),  bool (*write)(void*, const size_t));
 bool ssi_connected(void);
 void ssi_try_connect(void);
+void ssi_try_disconnect(void);
 
 void ssi_seqnum_init(uint8_t channel);
 void ssi_seqnum_reset(uint8_t channel);

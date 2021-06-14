@@ -30,10 +30,22 @@ static uint32_t ssi_conn_seqnum[SSI_MAX_CHANNELS] = {0};
 #define DISCONNECT_STRING "disconnect"
 #define DISCONNECT_CHARS 10
 static int chars_read;
-
+static uintptr_t context;
 static char connection_buf[DISCONNECT_CHARS];
 
 static ssi_io_funcs_t ssi_interface;
+
+static void process_input_data( uintptr_t context )
+{
+    if(strncmp(connection_buf, CONNECT_STRING, CONNECT_CHARS) == 0)
+    {
+        ssi_interface.connected = true;
+    }
+    else if(strncmp(connection_buf, DISCONNECT_STRING, DISCONNECT_CHARS) == 0)
+    {
+        ssi_interface.connected = false;
+    }
+}
 
 void ssi_init(bool (*read)(void*, const size_t),  bool (*write)(void*, const size_t))
 {
@@ -41,6 +53,7 @@ void ssi_init(bool (*read)(void*, const size_t),  bool (*write)(void*, const siz
     ssi_interface.ssi_write = write;
     ssi_interface.initialized = true;
     ssi_interface.connected = false;
+    SERCOM5_USART_ReadCallbackRegister(process_input_data, context);
 }
 
 bool ssi_connected(void)
@@ -52,15 +65,16 @@ void ssi_try_connect(void)
 {
     chars_read = 0;
     memset(connection_buf, 0,DISCONNECT_CHARS );
-    if(SERCOM5_USART_Read(&connection_buf[chars_read], CONNECT_CHARS))
-    {
-        
-   
-        if(strncmp(connection_buf, CONNECT_STRING, CONNECT_CHARS) == 0)
-        {
-            ssi_interface.connected = true;
-        }
-    }
+    SERCOM5_USART_ReadCallbackRegister(process_input_data, context);
+    ssi_interface.ssi_read(connection_buf, CONNECT_CHARS);
+}
+
+void ssi_try_disconnect(void)
+{
+    chars_read = 0;
+    memset(connection_buf, 0,DISCONNECT_CHARS );
+    
+    ssi_interface.ssi_read(connection_buf, DISCONNECT_CHARS);
 }
 
 void ssi_seqnum_init(uint8_t channel)
