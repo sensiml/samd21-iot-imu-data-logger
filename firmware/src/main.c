@@ -125,7 +125,7 @@ int main ( void )
 
     /* Initialize all modules */
     SYS_Initialize ( NULL );
-    
+
     /* Register and start the LED ticker */
     SYSTICK_TimerCallbackSet(SYSTICK_Callback, (uintptr_t) &tickrate);
     SYSTICK_TimerStart();
@@ -152,8 +152,8 @@ int main ( void )
             }
         }
         sleep_ms(1000);
-        
-        
+
+
     }
 #endif //SENSIML_SIMPLE_STREAM_BUILD
 

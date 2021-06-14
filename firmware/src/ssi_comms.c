@@ -17,6 +17,7 @@
  *==========================================================*/
 #include "app_config.h"
 #if SENSIML_SIMPLE_STREAM_BUILD
+#include "definitions.h"
 #include <inttypes.h>
 #include <string.h>
 #include <stdint.h>
