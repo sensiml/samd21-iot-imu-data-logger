@@ -9,6 +9,20 @@
             "is_default": true
         }
     ],
+    "firmware_download_links": [
+        {
+          "title": "Data Collection Firmware",
+          "description": "GitHub repository for Data Collection Code",
+          "link": "https://github.com/MicrochipTech/ml-samd21-iot-imu-data-logger"
+        },
+    ],
+    "documentation_links": [
+        {
+          "title": "Getting Started Guide",
+          "description": "",
+          "link": "https://sensiml.com/documentation/guides/getting-started/overview.html"
+        },
+    ],
     "device_connections": [
         {
             "name": "serial_simple_stream",
@@ -17,7 +31,7 @@
             "is_default": true,
             "serial_port_configuration": {
                 "com_port": null,
-                "baud": 921600,
+                "baud": 115200,
                 "stop_bits": 1,
                 "parity": 0,
                 "handshake": 0,

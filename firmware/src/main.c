@@ -51,17 +51,39 @@ static struct sensor_buffer_t snsr_buffer;
 static SNSR_DATA_TYPE packet_data_buffer[SNSR_NUM_AXES * SNSR_SAMPLES_PER_PACKET];
 #define PACKET_BUFFER_BYTE_LEN (SNSR_NUM_AXES * SNSR_SAMPLES_PER_PACKET * sizeof(SNSR_DATA_TYPE))
 static int num_packets = 0;
-static void send_json_config()
+static char json_config_str[512];
+
+static void build_json_config(void)
 {
-    printf("{\"version\":%d, \"sample_rate\":%d,"
-    "\"samples_per_packet\":%d,"
-    "\"column_location\":{"
-    "\"AccelerometerX\":0,"
-    "\"AccelerometerY\":1,"
-    "\"AccelerometerZ\":2,"
-    "\"GyroscopeX\":3,"
-    "\"GyroscopeY\":4,"
-    "\"GyroscopeZ\":5}}\n", SSI_JSON_CONFIG_VERSION, SNSR_SAMPLE_RATE, SNSR_SAMPLES_PER_PACKET);
+    int written=0;
+    int snsr_index = 0;
+    written += sprintf(json_config_str, "{\"version\":%d, \"sample_rate\":%d,"
+                        "\"samples_per_packet\":%d,"
+                        "\"column_location\":{"
+                        , SSI_JSON_CONFIG_VERSION, SNSR_SAMPLE_RATE, SNSR_SAMPLES_PER_PACKET);
+    #if SNSR_USE_ACCEL_X
+    written += sprintf(json_config_str+written, "\"AccelerometerX\":%d,", snsr_index++);
+    #endif
+    #if SNSR_USE_ACCEL_Y
+    written += sprintf(json_config_str+written, "\"AccelerometerY\":%d,", snsr_index++);
+    #endif
+    #if SNSR_USE_ACCEL_Z
+    written += sprintf(json_config_str+written, "\"AccelerometerZ\":%d,", snsr_index++);
+    #endif
+    #if SNSR_USE_GYRO_X
+    written += sprintf(json_config_str+written, "\"GyroscopeX\":%d,", snsr_index++);
+    #endif
+    #if SNSR_USE_GYRO_Y
+    written += sprintf(json_config_str+written, "\"GyroscopeY\":%d,", snsr_index++);
+    #endif
+    #if SNSR_USE_GYRO_Z
+    written += sprintf(json_config_str+written, "\"GyroscopeZ\":%d", snsr_index++);
+    #endif
+    if(json_config_str[written-1] == ',')
+    {
+        written--;
+    }
+    sprintf(json_config_str+written, "}}");
 }
 
 #endif //SENSIML_SIMPLE_STREAM_BUILD
@@ -71,10 +93,6 @@ void SYSTICK_Callback(uintptr_t context) {
     int tickrate = *((int *) context);
 
     ++tickcounter;
-    if(tickcounter % 1000 == 0 && !ssi_connected())
-    {
-        send_json_config();
-    }
     if (tickrate == 0) {
         mstick = 0;
     }
@@ -137,17 +155,6 @@ int main ( void )
     /* Initialize our data buffer */
     buffer_init(&snsr_buffer);
 
-#if SENSIML_SIMPLE_STREAM_BUILD
-    ssi_init(SERCOM5_USART_Read, SERCOM5_USART_Write);
-    SYSTICK_TimerStart();
-    
-    ssi_try_connect();
-    while(!ssi_connected())
-            {
-        }
-#endif //SENSIML_SIMPLE_STREAM_BUILD
-
-
     printf("\r\n");
 
     while (1)
@@ -174,6 +181,22 @@ int main ( void )
 #else
         printf("gyrometer disabled\r\n");
 #endif
+
+#if SENSIML_SIMPLE_STREAM_BUILD
+        build_json_config();
+        SERCOM5_USART_ReceiverEnable();
+        ssi_init(SERCOM5_USART_Read, SERCOM5_USART_Write);
+
+        uint32_t time = read_timer_ms();
+        ssi_try_connect();
+        while(!ssi_connected()) {
+            if ((read_timer_ms() - time) >= 1000) {
+                time = read_timer_ms();
+                printf("%s\r\n", json_config_str);
+            }
+        }
+        ssi_try_disconnect();
+#endif //SENSIML_SIMPLE_STREAM_BUILD
         buffer_reset(&snsr_buffer);
         break;
     }
@@ -209,7 +232,7 @@ int main ( void )
 #if SENSIML_SIMPLE_STREAM_BUILD
                 for(int i = 0; i < SNSR_NUM_AXES; i++)
                 {
-                    packet_data_buffer[i]=ptr[i];
+                    packet_data_buffer[i+(num_packets * SNSR_NUM_AXES)]=ptr[i];
                 }
                 num_packets++;
                 if(num_packets == SNSR_SAMPLES_PER_PACKET)

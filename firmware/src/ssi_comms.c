@@ -21,6 +21,7 @@
 #include <inttypes.h>
 #include <string.h>
 #include <stdint.h>
+#include <stddef.h>
 #include <stdbool.h>
 #include "ssi_comms.h"
 volatile unsigned int myData[2] = {3,4};
@@ -36,10 +37,7 @@ static ssi_io_funcs_t ssi_interface;
 
 void process_input_data( uintptr_t context )
 {
-    if(context != myData[0])
-    {
-        return;
-    }
+  
     if(strncmp(connection_buf, CONNECT_STRING, CONNECT_CHARS+1) == 0)
     {
         ssi_interface.connected = true;
@@ -56,9 +54,6 @@ void ssi_init(bool (*read)(void*, const size_t),  bool (*write)(void*, const siz
     ssi_interface.ssi_write = write;
     ssi_interface.initialized = true;
     ssi_interface.connected = false;
-    SERCOM5_USART_ReadCallbackRegister(process_input_data, (uintptr_t) &myData[0]);
-
-
 }
 
 bool ssi_connected(void)
@@ -69,12 +64,14 @@ bool ssi_connected(void)
 void ssi_try_connect(void)
 {
     memset(connection_buf, 0, TOTAL_CHARS );
+    SERCOM5_USART_ReadCallbackRegister(process_input_data, (uintptr_t) &myData[0]);
     ssi_interface.ssi_read(connection_buf, CONNECT_CHARS);
 }
 
 void ssi_try_disconnect(void)
 {
     memset(connection_buf, 0,TOTAL_CHARS );
+    SERCOM5_USART_ReadCallbackRegister(process_input_data, (uintptr_t) &myData[0]);
     ssi_interface.ssi_read(connection_buf, DISCONNECT_CHARS);
 }
 
@@ -124,6 +121,7 @@ void ssiv2_publish_sensor_data(uint8_t channel, uint8_t* buffer, int size)
         return;
     }
     uint8_t ssiv2header[SSI_HEADER_SIZE];
+    memset(ssiv2header, 0, SSI_HEADER_SIZE);
     uint8_t sync = SSI_SYNC_DATA;
     uint8_t rsvd = 0;
     uint16_t u16len = (size + 6);
