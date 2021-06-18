@@ -6,13 +6,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: E45D1648EFC10229D7BE94DB19221FF7
-- generatedChecksum: 8B887FDD744EFCEB54B95280FFE62184
+- generatedChecksum: 9774EE129BFB9246F46C996D297C7B48
   logicalPath: config/SAMD21_IOT_WG_BMI160
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 8B887FDD744EFCEB54B95280FFE62184
+  userChecksum: 9774EE129BFB9246F46C996D297C7B48
 - generatedChecksum: 5BDCF10A11C62736A38DD1B982071E55
   logicalPath: config/SAMD21_IOT_WG_BMI160
   name: interrupts.c
@@ -76,13 +76,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: ACA71599E8685D8BB3066249F0BF69DA
-- generatedChecksum: 13A22E37EDB5475D57C26E6A13275A42
+- generatedChecksum: D91A845D41FD04499A787FB2740C7367
   logicalPath: config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart
   name: plib_sercom5_usart.c
   physicalPath: peripheral/sercom/usart
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 13A22E37EDB5475D57C26E6A13275A42
+  userChecksum: D91A845D41FD04499A787FB2740C7367
 - generatedChecksum: 901668A7AECAE8B7188421F4A84AD20C
   logicalPath: config/SAMD21_IOT_WG_BMI160/peripheral/systick
   name: plib_systick.c
@@ -447,13 +447,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 43B4A52EBF9A4D3D4479988420940683
-- generatedChecksum: 1F2B07AD392A2DAADDDBA7E5B4F4BCC3
+- generatedChecksum: 8FCF87489C52EC5F0EC90FEE597E0EEC
   logicalPath: config/SAMD21_IOT_WG_BMI160/peripheral/sercom/usart
   name: plib_sercom5_usart.h
   physicalPath: peripheral/sercom/usart
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1F2B07AD392A2DAADDDBA7E5B4F4BCC3
+  userChecksum: 8FCF87489C52EC5F0EC90FEE597E0EEC
 - generatedChecksum: 555AC09B32F566FBFB0A0505CF73ABD6
   logicalPath: config/SAMD21_IOT_WG_BMI160/peripheral/sercom/i2c_master
   name: plib_sercom_i2c_master_common.h
