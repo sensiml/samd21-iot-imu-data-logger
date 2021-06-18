@@ -32,6 +32,7 @@
 
 #if SENSIML_SIMPLE_STREAM_BUILD
 #include "ssi_comms.h"
+static ssi_io_funcs_t ssi_io_s;
 #endif //SENSIML_SIMPLE_STREAM_BUILD
 
 #define SYSTICK_FREQ_IN_MHZ 48 // !NB! This must be changed if the processor clock changes
@@ -52,6 +53,24 @@ static SNSR_DATA_TYPE packet_data_buffer[SNSR_NUM_AXES * SNSR_SAMPLES_PER_PACKET
 #define PACKET_BUFFER_BYTE_LEN (SNSR_NUM_AXES * SNSR_SAMPLES_PER_PACKET * sizeof(SNSR_DATA_TYPE))
 static int num_packets = 0;
 static char json_config_str[512];
+
+static void connect_reconnect()
+{
+    uint32_t time = read_timer_ms();
+
+    printf("%s\r\n", json_config_str);
+    while(!ssi_io_s.connected) {
+        if(SERCOM5_USART_ReadCountGet() >= CONNECT_CHARS)
+        {
+            ssi_try_connect();
+        }
+        if ((read_timer_ms() - time) >= 1000) {
+            time = read_timer_ms();
+            printf("%s\r\n", json_config_str);
+        }
+    }
+    buffer_reset(&snsr_buffer);
+}
 
 static void build_json_config(void)
 {
@@ -183,19 +202,14 @@ int main ( void )
 #endif
 
 #if SENSIML_SIMPLE_STREAM_BUILD
+        ssi_io_s.ssi_read = SERCOM5_USART_Read;
+        ssi_io_s.ssi_write = SERCOM5_USART_Write;
+        ssi_io_s.connected = false;
+        ssi_init(&ssi_io_s);
         build_json_config();
-        SERCOM5_USART_ReceiverEnable();
-        ssi_init(SERCOM5_USART_Read, SERCOM5_USART_Write);
 
-        uint32_t time = read_timer_ms();
-        ssi_try_connect();
-        while(!ssi_connected()) {
-            if ((read_timer_ms() - time) >= 1000) {
-                time = read_timer_ms();
-                printf("%s\r\n", json_config_str);
-            }
-        }
-        ssi_try_disconnect();
+        connect_reconnect();
+
 #endif //SENSIML_SIMPLE_STREAM_BUILD
         buffer_reset(&snsr_buffer);
         break;
@@ -237,13 +251,19 @@ int main ( void )
                 num_packets++;
                 if(num_packets == SNSR_SAMPLES_PER_PACKET)
                 {
-                    #if SSI_JSON_CONFIG_VERSION==2
+                    if(ssi_io_s.connected)
+                    {
+#if SSI_JSON_CONFIG_VERSION==2
                     ssiv2_publish_sensor_data(0, (uint8_t*) packet_data_buffer, PACKET_BUFFER_BYTE_LEN);
-                    #elif SSI_JSON_CONFIG_VERSION==1
+#elif SSI_JSON_CONFIG_VERSION==1
                     ssiv1_publish_sensor_data((uint8_t*) packet_data_buffer, PACKET_BUFFER_BYTE_LEN);
-                    #endif
+#endif
                     num_packets = 0;
+                    }
                 }
+               
+                
+                
 #elif DATA_VISUALIZER_BUILD
                 uint8_t headerbyte = MPDV_START_OF_FRAME;
 

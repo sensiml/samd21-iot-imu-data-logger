@@ -18,81 +18,81 @@
 #include "app_config.h"
 #if SENSIML_SIMPLE_STREAM_BUILD
 #include "definitions.h"
-#include <inttypes.h>
-#include <string.h>
-#include <stdint.h>
-#include <stddef.h>
-#include <stdbool.h>
 #include "ssi_comms.h"
-volatile unsigned int myData[2] = {3,4};
-static uint32_t ssi_conn_seqnum[SSI_MAX_CHANNELS] = {0};
-#define CONNECT_STRING "connect"
-#define CONNECT_CHARS 7
-#define DISCONNECT_STRING "disconnect"
-#define DISCONNECT_CHARS 10
-#define TOTAL_CHARS 11
+#include <inttypes.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <string.h>
+
+/*
+ * Some functions in here will be unused, depending on SSI version
+ */
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-function"
+
+volatile unsigned int myData[2]                         = { 3, 4 };
+static uint32_t       ssi_conn_seqnum[SSI_MAX_CHANNELS] = { 0 };
+
 static char connection_buf[TOTAL_CHARS];
 
-static ssi_io_funcs_t ssi_interface;
+static ssi_io_funcs_t* p_ssi_interface;
 
-void process_input_data( uintptr_t context )
+void ssi_init(ssi_io_funcs_t* p_interface)
 {
-  
-    if(strncmp(connection_buf, CONNECT_STRING, CONNECT_CHARS+1) == 0)
-    {
-        ssi_interface.connected = true;
-    }
-    else if(strncmp(connection_buf, DISCONNECT_STRING, TOTAL_CHARS) == 0)
-    {
-        ssi_interface.connected = false;
-    }
+    p_ssi_interface = p_interface;
+    p_interface->initialized = true;
 }
 
-void ssi_init(bool (*read)(void*, const size_t),  bool (*write)(void*, const size_t))
-{
-    ssi_interface.ssi_read = read;
-    ssi_interface.ssi_write = write;
-    ssi_interface.initialized = true;
-    ssi_interface.connected = false;
-}
-
-bool ssi_connected(void)
-{
-    return ssi_interface.initialized && ssi_interface.connected;
-}
+bool ssi_connected(void) { return p_ssi_interface->initialized && p_ssi_interface->connected; }
 
 void ssi_try_connect(void)
 {
-    memset(connection_buf, 0, TOTAL_CHARS );
-    SERCOM5_USART_ReadCallbackRegister(process_input_data, (uintptr_t) &myData[0]);
-    ssi_interface.ssi_read(connection_buf, CONNECT_CHARS);
+    int read = 0;
+    memset(connection_buf, 0, TOTAL_CHARS);
+    read = p_ssi_interface->ssi_read((uint8_t*) connection_buf, CONNECT_CHARS);
+    if (read == CONNECT_CHARS)
+    {
+        if (strncmp(connection_buf, CONNECT_STRING, CONNECT_CHARS + 1) == 0)
+        {
+            p_ssi_interface->connected = true;
+        }
+    }
 }
 
 void ssi_try_disconnect(void)
 {
-    memset(connection_buf, 0,TOTAL_CHARS );
-    SERCOM5_USART_ReadCallbackRegister(process_input_data, (uintptr_t) &myData[0]);
-    ssi_interface.ssi_read(connection_buf, DISCONNECT_CHARS);
+    int read = 0;
+    memset(connection_buf, 0, TOTAL_CHARS);
+
+    read = p_ssi_interface->ssi_read((uint8_t*) connection_buf, DISCONNECT_CHARS);
+    if (read == DISCONNECT_CHARS)
+    {
+        if (strncmp(connection_buf, DISCONNECT_STRING, TOTAL_CHARS) == 0)
+        {
+            p_ssi_interface->connected = false;
+        }
+    }
 }
 
 void ssi_seqnum_init(uint8_t channel)
 {
     if (channel >= SSI_MAX_CHANNELS)
-      return;
+        return;
     ssi_conn_seqnum[channel] = 0;
 }
 
 void ssi_seqnum_reset(uint8_t channel)
 {
     if (channel >= SSI_MAX_CHANNELS)
-      return;
+        return;
     ssi_conn_seqnum[channel] = 0;
 }
 
 uint32_t ssi_seqnum_update(uint8_t channel)
 {
     if (channel >= SSI_MAX_CHANNELS)
-      return 0;
+        return 0;
     ssi_conn_seqnum[channel]++;
     return ssi_conn_seqnum[channel];
 }
@@ -100,11 +100,11 @@ uint32_t ssi_seqnum_update(uint8_t channel)
 uint32_t ssi_seqnum_get(uint8_t channel)
 {
     if (channel >= SSI_MAX_CHANNELS)
-      return 0;
+        return 0;
     return ssi_conn_seqnum[channel];
 }
 
-uint8_t ssi_payload_checksum_get(uint8_t *p_data, uint16_t len)
+uint8_t ssi_payload_checksum_get(uint8_t* p_data, uint16_t len)
 {
     uint8_t crc8 = p_data[0];
     for (int k = 1; k < len; k++)
@@ -116,17 +116,17 @@ uint8_t ssi_payload_checksum_get(uint8_t *p_data, uint16_t len)
 
 void ssiv2_publish_sensor_data(uint8_t channel, uint8_t* buffer, int size)
 {
-    if(ssi_interface.initialized == false)
+    if (p_ssi_interface->initialized == false)
     {
         return;
     }
     uint8_t ssiv2header[SSI_HEADER_SIZE];
     memset(ssiv2header, 0, SSI_HEADER_SIZE);
-    uint8_t sync = SSI_SYNC_DATA;
-    uint8_t rsvd = 0;
+    uint8_t  sync   = SSI_SYNC_DATA;
+    uint8_t  rsvd   = 0;
     uint16_t u16len = (size + 6);
     uint32_t seqnum = ssi_seqnum_update(channel);
-    uint8_t crc8 = 0;
+    uint8_t  crc8   = 0;
 
     ssiv2header[0] = sync;
     ssiv2header[1] = (u16len >> 0) & 0xff;
@@ -139,30 +139,28 @@ void ssiv2_publish_sensor_data(uint8_t channel, uint8_t* buffer, int size)
     ssiv2header[8] = (seqnum >> 24) & 0xff;
 
     // compute 8-bit checksum
-    crc8 = crc8 ^ ssi_payload_checksum_get(ssiv2header+3, SSI_HEADER_SIZE-3);
+    crc8 = crc8 ^ ssi_payload_checksum_get(ssiv2header + 3, SSI_HEADER_SIZE - 3);
     crc8 = crc8 ^ ssi_payload_checksum_get(buffer, size);
 
     // Send SSI v2 header information
-    ssi_interface.ssi_write(ssiv2header, SSI_HEADER_SIZE);
+    p_ssi_interface->ssi_write(ssiv2header, SSI_HEADER_SIZE);
 
     // Send sensor data
-    ssi_interface.ssi_write(buffer, size);
+    p_ssi_interface->ssi_write(buffer, size);
 
     // Add 8-bit checksum
-    ssi_interface.ssi_write(&crc8, 1);
+    p_ssi_interface->ssi_write(&crc8, 1);
 }
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wunused-function"
 
 void ssiv1_publish_sensor_data(uint8_t* buffer, int size)
 {
-    if(ssi_interface.initialized == false)
+    if (p_ssi_interface->initialized == false)
     {
         return;
     }
-    ssi_interface.ssi_write(buffer, size);
+    p_ssi_interface->ssi_write(buffer, size);
 }
 #pragma GCC diagnostic pop
 
-#endif //SENSIML_SIMPLE_STREAM_BUILD
+#endif  // SENSIML_SIMPLE_STREAM_BUILD

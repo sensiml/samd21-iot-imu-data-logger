@@ -29,7 +29,13 @@
 #define SSI_MAX_CHANNELS           (4)
 #define SSI_CHANNEL_DEFAULT        (0)
 
-typedef bool (*uart_rw)(void*, const size_t);
+#define CONNECT_STRING "connect"
+#define CONNECT_CHARS 7
+#define DISCONNECT_STRING "disconnect"
+#define DISCONNECT_CHARS 10
+#define TOTAL_CHARS 11
+
+typedef size_t (*uart_rw)(uint8_t*, const size_t);
 
 typedef struct
 {
@@ -39,7 +45,7 @@ typedef struct
     bool connected;
 } ssi_io_funcs_t;
 
-void ssi_init(bool (*read)(void*, const size_t),  bool (*write)(void*, const size_t));
+void ssi_init(ssi_io_funcs_t* p_interface);
 bool ssi_connected(void);
 void ssi_try_connect(void);
 void ssi_try_disconnect(void);
